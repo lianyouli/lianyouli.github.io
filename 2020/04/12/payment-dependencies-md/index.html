@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://lianyouli.gitee.io/2020/04/12/payment-dependencies-md/image-20200412164817326.png">
 <meta property="og:image" content="https://lianyouli.gitee.io/2020/04/12/payment-dependencies-md/image-20200412211417906.png">
 <meta property="article:published_time" content="2020-04-12T01:36:54.000Z">
-<meta property="article:modified_time" content="2020-05-24T13:17:04.742Z">
+<meta property="article:modified_time" content="2020-05-24T13:21:20.943Z">
 <meta property="article:author" content="李联友">
 <meta property="article:tag" content="Payment">
 <meta name="twitter:card" content="summary">
@@ -201,7 +201,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-05-24 21:17:04" itemprop="dateModified" datetime="2020-05-24T21:17:04+08:00">2020-05-24</time>
+                <time title="Modified: 2020-05-24 21:21:20" itemprop="dateModified" datetime="2020-05-24T21:21:20+08:00">2020-05-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -270,7 +270,9 @@
 <p>后面在央妈的牵头下，主要的85家机构共同出资成立了银联，相当于大家一起做老板，有蛋糕大家一起分着吃。</p>
 <p>连线序列不代表先后顺序，而是为了更好的解释说明，同时，这里会屏蔽一些其它的因素，只涉及我自己描述相关的因素。</p>
 <p>[^_^]:</p>
-<pre><code>1. 发卡机构得经过央妈批准和监督，且得在央妈开立账户，存入必需的存款准备金，以及超额准备金。
+<pre><code>&lt;!--
+
+1. 发卡机构得经过央妈批准和监督，且得在央妈开立账户，存入必需的存款准备金，以及超额准备金。
 
 2. 卡组织得经过央妈批准和监督，负责银行卡跨行信息交换网络以及资金清算
 
@@ -295,7 +297,9 @@
 
 9. 商户需要和收单机构签约。
 
-10. 消费者拿卡去商户消费。</code></pre><p>上述过程，其实消费者在拿卡使用POS机消费之后，可以从小票看到上述发卡行信息，卡BIN信息，从卡BIN信息就知道使用了哪个卡组织，同时，也可以看到商户信息，以及商户对应的收单机构信息等等信息，所以一张小票，提供了很多交易相关信息。下图就是我自己在全家消费的POS小票。</p>
+10. 消费者拿卡去商户消费。
+
+--&gt;</code></pre><p>上述过程，其实消费者在拿卡使用POS机消费之后，可以从小票看到上述发卡行信息，卡BIN信息，从卡BIN信息就知道使用了哪个卡组织，同时，也可以看到商户信息，以及商户对应的收单机构信息等等信息，所以一张小票，提供了很多交易相关信息。下图就是我自己在全家消费的POS小票。</p>
 <p><img src="/2020/04/12/payment-dependencies-md/image-20200412211417906.png" alt="image-20200412211417906"></p>
 <h2 id="支付背后的会计支撑"><a href="#支付背后的会计支撑" class="headerlink" title="支付背后的会计支撑"></a>支付背后的会计支撑</h2><p>当时学习时，对对账文件中借贷总是不能理解，总是要和显示生活中的借贷行为联系上。后面在看了会计学原理之后，才算真正理解过来：借贷只是一种表示符号，不代表任何意义，借在左边，贷在右边而已，而且有借必有贷，借贷必相等。</p>
 <p>借贷到底是增加还是减少，还得从静态会计恒等式说起：</p>

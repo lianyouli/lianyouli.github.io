@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>支付系统架构</title>
+      <link href="/2020/06/07/payment-architecture/"/>
+      <url>/2020/06/07/payment-architecture/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>这个是我理解的支付系统架构</p></blockquote><a id="more"></a><p><img src="/2020/06/07/payment-architecture/architecture.png" alt="支付架构"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>支付战争</title>
       <link href="/2020/05/31/payment-book-paypal-war/"/>
       <url>/2020/05/31/payment-book-paypal-war/</url>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>联友の周记</title>
+  <icon>https://lianyouli.gitee.io/icon.png</icon>
+  <subtitle>密涅瓦的猫头鹰在黄昏起飞</subtitle>
+  <link href="https://lianyouli.gitee.io/atom.xml" rel="self"/>
+  
+  <link href="https://lianyouli.gitee.io/"/>
+  <updated>2020-08-09T13:35:05.363Z</updated>
+  <id>https://lianyouli.gitee.io/</id>
+  
+  <author>
+    <name>李联友</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中国人民银行关于加强支付受理终端及相关业务管理的通知（征求意见稿）</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/</id>
+    <published>2020-08-09T05:13:04.000Z</published>
+    <updated>2020-08-09T13:35:05.363Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.pbc.gov.cn/tiaofasi/144941/144979/3941920/4035719/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《中国人民银行关于加强支付受理终端及相关业务管理的通知（征求意见稿）》&lt;/a&gt; 是既 &lt;a href=&quot;/Payment/法规/rules-pboc-no21/index.html&quot;&gt;21号文 &lt;/a&gt; 之后，又一部关于支付受理终端的法规。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>21号文</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no21/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no21/</id>
+    <published>2020-08-02T02:16:22.000Z</published>
+    <updated>2020-08-08T01:43:40.330Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;缩写或简称泛滥的地方，非金融莫属了。21号文的全称是：中国人民银行关于强化银行卡受理终端安全管理的通知（银发〔2017〕21号）；看完觉得还是21号文更好交流。该规范规范了银行卡受理终端。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《银行卡清算机构管理办法》学习笔记</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-clearing/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-clearing/</id>
+    <published>2020-07-26T02:49:38.000Z</published>
+    <updated>2020-08-08T01:45:16.285Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;法律法规枯燥之中又妙趣横生；因为它定义了规则。&lt;/p&gt;
+&lt;p&gt;《银行卡清算机构管理办法》对很多人支付行业的从业人员都无关紧要，因为它是清算机构而且基本是高层需要关心的。对于像鄙人这样的一个小螺丝钉，读一下此法规，虽然理解不是很透切，只能说对公司的启动以及运营等有个粗略的了解。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Informatica退出中国大陆市场</title>
+    <link href="https://lianyouli.gitee.io/%E9%9D%99%E5%A4%9C%E6%80%9D/thinking-infa-withdrawal/"/>
+    <id>https://lianyouli.gitee.io/%E9%9D%99%E5%A4%9C%E6%80%9D/thinking-infa-withdrawal/</id>
+    <published>2020-07-17T14:45:22.000Z</published>
+    <updated>2020-07-18T13:52:36.909Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;2020年好像开年不利，各种灾难接踵而至，例如全球新型冠状病毒肺炎，洪灾等；而最近听朋友说Informatica退出中国大陆市场，有点震惊，不管什么原因，终究是有些无奈与无力。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="静夜思" scheme="https://lianyouli.gitee.io/categories/%E9%9D%99%E5%A4%9C%E6%80%9D/"/>
+    
+    
+    <category term="静夜思" scheme="https://lianyouli.gitee.io/tags/%E9%9D%99%E5%A4%9C%E6%80%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ATM取款</title>
+    <link href="https://lianyouli.gitee.io/Payment/payment-trading-scenario/"/>
+    <id>https://lianyouli.gitee.io/Payment/payment-trading-scenario/</id>
+    <published>2020-07-04T14:19:50.000Z</published>
+    <updated>2020-07-04T14:44:15.978Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;如果要使用现金，则需要将钱从卡中取出来，当然，取钱的途径很多， 例如1. 从柜台取钱； 2. 从ATM取钱；3.转账给他人，他人给现金给你；4. 去商户消费，然后商户给你现金。这里只讨论第2点。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="交易场景" scheme="https://lianyouli.gitee.io/tags/%E4%BA%A4%E6%98%93%E5%9C%BA%E6%99%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>猎狐</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/payment-tv-hunt-fox/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/payment-tv-hunt-fox/</id>
+    <published>2020-06-12T13:24:08.000Z</published>
+    <updated>2020-06-12T14:25:32.003Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;“猎狐” 经济犯罪类电视剧，还是非常精彩的，不管是表演，有我喜欢的演员；当然还有剧情，对于本人刚进入支付行业的新人来说，里面很多的经济犯罪行为值得学习。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="电视剧" scheme="https://lianyouli.gitee.io/categories/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="经济犯罪" scheme="https://lianyouli.gitee.io/tags/%E7%BB%8F%E6%B5%8E%E7%8A%AF%E7%BD%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>支付系统架构</title>
+    <link href="https://lianyouli.gitee.io/Payment/payment-architecture/"/>
+    <id>https://lianyouli.gitee.io/Payment/payment-architecture/</id>
+    <published>2020-06-07T10:59:44.000Z</published>
+    <updated>2020-06-19T13:43:41.867Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这个是我认为的支付系统架构，后续再完善。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>支付战争</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E4%B9%A6%E7%B1%8D/payment-book-paypal-war/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E4%B9%A6%E7%B1%8D/payment-book-paypal-war/</id>
+    <published>2020-05-31T12:55:25.000Z</published>
+    <updated>2020-06-01T11:28:00.677Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;支付战争，其英文 The Paypal War，更能体现其故事的主体是什么。Paypal 出来的人都是支付大牛，所以，业界都称为Paypal黑帮。所以支付战争非常值得一探。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="书籍" scheme="https://lianyouli.gitee.io/categories/Payment/%E4%B9%A6%E7%B1%8D/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何确定一笔交易</title>
+    <link href="https://lianyouli.gitee.io/Payment/payment-confirm-trx/"/>
+    <id>https://lianyouli.gitee.io/Payment/payment-confirm-trx/</id>
+    <published>2020-05-29T12:22:09.000Z</published>
+    <updated>2020-05-31T12:48:20.101Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;确定一笔交易的要素&quot;&gt;&lt;a href=&quot;#确定一笔交易的要素&quot; class=&quot;headerlink&quot; title=&quot;确定一笔交易的要素&quot;&gt;&lt;/a&gt;确定一笔交易的要素&lt;/h2&gt;&lt;p&gt;如何确定一笔交易，在ISO8583协议里就已经明确的定义了下面四个域来唯一确定一笔交易&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;交易时间  - F7 &lt;/li&gt;
+&lt;li&gt;收单机构 - F32&lt;/li&gt;
+&lt;li&gt;系统跟踪号 - F11&lt;/li&gt;
+&lt;li&gt;发卡机构 - F33&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>金融的理解</title>
+    <link href="https://lianyouli.gitee.io/Payment/fin-service/"/>
+    <id>https://lianyouli.gitee.io/Payment/fin-service/</id>
+    <published>2020-05-21T13:06:49.000Z</published>
+    <updated>2020-05-24T13:10:35.622Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;金融是什么，在没有接触金融相关的时候，真的觉得太高深了，头大，也不想去了解它。现在接触到金融相关的，还是一样的感觉，头大，太复杂了。&lt;/p&gt;
+&lt;p&gt;不过不管是什么复杂，其本质就服务，金融服务就是服务，那么如何提高服务质量，就需要重新定义支付场景，例如，现在的刷脸支付等都是很好的尝试，但重新定义支付场景都需要考虑时间和空间因素。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于团队知识共享的一些思考</title>
+    <link href="https://lianyouli.gitee.io/Team/team-sharing/"/>
+    <id>https://lianyouli.gitee.io/Team/team-sharing/</id>
+    <published>2020-05-07T14:10:29.000Z</published>
+    <updated>2020-05-10T08:36:59.880Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;关于团队知识共享的一些思考&quot;&gt;&lt;a href=&quot;#关于团队知识共享的一些思考&quot; class=&quot;headerlink&quot; title=&quot;关于团队知识共享的一些思考&quot;&gt;&lt;/a&gt;关于团队知识共享的一些思考&lt;/h1&gt;&lt;p&gt;团队知识共享，大家都会认同是百利无一害的，但是在一个公司里又谁在做到知识共享呢？&lt;/p&gt;
+&lt;p&gt;是不是感到很奇怪？这么好的事情为啥又没有人喜欢呢？哈哈，真有点像渣男渣女讨人爱，好人就该没对象。今天我就谈谈我对团队知识共享的一些历程吧。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Team" scheme="https://lianyouli.gitee.io/categories/Team/"/>
+    
+    
+    <category term="Team" scheme="https://lianyouli.gitee.io/tags/Team/"/>
+    
+    <category term="Sharing" scheme="https://lianyouli.gitee.io/tags/Sharing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>央妈在新冠状病毒疫情结束之后的操作</title>
+    <link href="https://lianyouli.gitee.io/Payment/yangma-coronavirus-actions/"/>
+    <id>https://lianyouli.gitee.io/Payment/yangma-coronavirus-actions/</id>
+    <published>2020-04-13T00:46:14.000Z</published>
+    <updated>2020-05-10T08:39:52.940Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;大家都说新冠状病毒疫情影响很大，那为啥这么说，又是如何影响的，央妈又是如何应对这种影响的？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    
+    <category term="疫情" scheme="https://lianyouli.gitee.io/tags/%E7%96%AB%E6%83%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何理解支付</title>
+    <link href="https://lianyouli.gitee.io/Payment/payment-dependencies-md/"/>
+    <id>https://lianyouli.gitee.io/Payment/payment-dependencies-md/</id>
+    <published>2020-04-12T01:36:54.000Z</published>
+    <updated>2020-05-24T13:29:12.743Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在支付行业，其背后有很多知识学科做支撑，也有很多的专业术语需要去理解。如果想要对支付更好的理解，需要补充很多的知识。经过这段时间，自学了微观经济学，以及还在学习的会计学原理，有一点小的体会，就记录于此。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>payment 2019/10/21</title>
+    <link href="https://lianyouli.gitee.io/Payment/payment-20191021/"/>
+    <id>https://lianyouli.gitee.io/Payment/payment-20191021/</id>
+    <published>2020-04-11T13:41:14.000Z</published>
+    <updated>2020-04-12T01:30:51.221Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;从2020年10月21日开始正式入职金融相关的行业，对能够进入自己一直想进入的行业充满了期待，也对自己对金融相关的知识是一片空白感到挑战；有挑战才有成长，所以我将在这里记录下自己对支付相关的学习历程和体会。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+  </entry>
+  
+</feed>

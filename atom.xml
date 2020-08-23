@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>联友の周记</title>
+  <icon>https://lianyouli.gitee.io/icon.png</icon>
+  <subtitle>密涅瓦的猫头鹰在黄昏起飞</subtitle>
+  <link href="https://lianyouli.gitee.io/atom.xml" rel="self"/>
+  
+  <link href="https://lianyouli.gitee.io/"/>
+  <updated>2020-08-23T14:51:38.882Z</updated>
+  <id>https://lianyouli.gitee.io/</id>
+  
+  <author>
+    <name>李联友</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>清算架构</title>
+    <link href="https://lianyouli.gitee.io/Payment/payment-clearing-architecture/"/>
+    <id>https://lianyouli.gitee.io/Payment/payment-clearing-architecture/</id>
+    <published>2020-08-23T14:50:25.000Z</published>
+    <updated>2020-08-23T14:51:38.882Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>还在整理中</p></blockquote>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;还在整理中&lt;/p&gt;
+&lt;/blockquote&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>非金融机构支付服务管理办法</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no2-201006/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no2-201006/</id>
+    <published>2020-08-15T14:54:44.000Z</published>
+    <updated>2020-08-23T10:53:39.471Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>2010年6月份央行发布了 <a href="http://www.pbc.gov.cn/tiaofasi/144941/144957/2845832/index.html" target="_blank" rel="noopener"> 中国人民银行令〔2010〕第2号（非金融机构支付服务管理办法）</a>（以下简称2号令）开启了第三方支付的合法性，从此第三方支付群雄逐鹿，单支付牌照就一度炒到几亿</p></blockquote><a id="more"></a><p>2号令规定了，支付机构需要取得《支付业务许可证》才是合法的，已经从事支付业务的非金融机构在一年以内完成申请；所以从<strong>已获许可机构（支付机构）</strong>名单里看到的机构的开始生效时间基本都是2011年5月份，包括银联商务，支付宝，财付通等等。下面我们来看看其内容：</p><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>规范非金融机构支付服务行为，防范支付风险。</p><h2 id="非金融机构支付服务种类"><a href="#非金融机构支付服务种类" class="headerlink" title="非金融机构支付服务种类"></a>非金融机构支付服务种类</h2><ul><li><p>网络支付</p><p>互联网支付，移动电话支付，固话支付，数字电视支付等等，例如微信支付宝，电话购物等</p></li><li><p>预付卡的发行与受理</p><p>例如你去理发店，Tony老师总是推荐你办张卡。当然这个卡不是理发店能够发行的，而是需要有预付卡的发行与受理的支付公司给理发店定制的。</p></li><li><p>银行卡收单</p><p>POS终端等收单</p></li><li><p>其他支付服务</p></li></ul><h2 id="义务"><a href="#义务" class="headerlink" title="义务"></a>义务</h2><ul><li>依法接受央行的监督管理</li><li>履行发洗钱</li><li>不得损害国家利益、社会公共利益和客户合法权益</li></ul><h2 id="申请资质"><a href="#申请资质" class="headerlink" title="申请资质"></a>申请资质</h2><p>略</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;2010年6月份央行发布了 &lt;a href=&quot;http://www.pbc.gov.cn/tiaofasi/144941/144957/2845832/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; 中国人民银行令〔2010〕第2号（非金融机构支付服务管理办法）&lt;/a&gt;（以下简称2号令）开启了第三方支付的合法性，从此第三方支付群雄逐鹿，单支付牌照就一度炒到几亿&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中国人民银行关于加强支付受理终端及相关业务管理的通知（征求意见稿）</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/</id>
+    <published>2020-08-09T05:13:04.000Z</published>
+    <updated>2020-08-23T10:47:00.468Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><a href="http://www.pbc.gov.cn/tiaofasi/144941/144979/3941920/4035719/index.html" target="_blank" rel="noopener">《中国人民银行关于加强支付受理终端及相关业务管理的通知（征求意见稿）》</a> 是既 <a href="/Payment/法规/rules-pboc-no21/index.html">21号文 </a> 之后，又一部关于支付受理终端的法规。</p></blockquote><a id="more"></a><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="终端问题"><a href="#终端问题" class="headerlink" title="终端问题"></a>终端问题</h3><p>现象</p><ul><li>买卖终端</li><li>移机</li><li>一机多码</li><li>一机多户</li><li>…..</li></ul><p>严重性</p><ul><li>为违法犯罪分子进行资金转移带来便利</li></ul><h3 id="特约商户问题"><a href="#特约商户问题" class="headerlink" title="特约商户问题"></a>特约商户问题</h3><p>现象</p><ul><li>准入不严格</li><li>核实流于形式</li></ul><p>严重性</p><ul><li>虚假商户问题任然突出</li></ul><h3 id="条码支付问题"><a href="#条码支付问题" class="headerlink" title="条码支付问题"></a>条码支付问题</h3><p>现象</p><ul><li>没有健全条码支付终端、收单条码管理机制</li></ul><p>严重性</p><ul><li>导致条码支付业务涉黑灰产的风险加大</li></ul><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>规范收单等业务管理</li><li>打击跨境赌博、电信诈骗等违法犯罪活动</li><li>切断黑灰产业资金链</li><li>保障社会公众利益</li></ul><h2 id="整治方向"><a href="#整治方向" class="headerlink" title="整治方向"></a>整治方向</h2><h3 id="支付受理终端管理"><a href="#支付受理终端管理" class="headerlink" title="支付受理终端管理"></a>支付受理终端管理</h3><ul><li><p>银行卡受理终端</p><p><img src="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/Terminal_202006_Card.png" alt></p><blockquote><p>F -  终端生产厂商  - 深蓝青色<br>A - 收单机构 - 橘色<br>C -  清算机构 - 蓝色<br>五要素： 收单机构代码、特约商户编码、特约商户统一社会信用代码（小微商户为负责人身份证件号码）、特约商户收单结算账户、银行卡受理终端布放地址</p></blockquote></li><li><p>条码支付受理终端</p><ul><li><p>受理终端</p><p>终端序列号与五要素</p></li><li><p>辅助受理终端</p><p>四要素</p></li><li><p>收款条码</p><p>区分个人和特约商户</p></li></ul><blockquote><p>四要素： 收单机构代码、特约商户统一社会信用代码、特约商户收单结算账户和特约商户经营地址</p></blockquote></li><li><p>创新支付受理终端</p><p>至少提前30日向中国人民银行及其分支机构报告</p></li></ul><h3 id="特约商户管理"><a href="#特约商户管理" class="headerlink" title="特约商户管理"></a>特约商户管理</h3><ul><li>特约商户实名制</li><li>明确商户信息核验方式<ul><li>面对面</li><li>同步视频</li></ul></li><li>特约商户巡检要求</li></ul><h3 id="收单业务监测"><a href="#收单业务监测" class="headerlink" title="收单业务监测"></a>收单业务监测</h3><ul><li>交易信息的真实性和完整性</li><li>终端位置监测</li><li>特约商户资金结算监测</li><li>专项监测与信息核对<ul><li>边境地区</li><li>核对交易信息和五要素不一致的</li></ul></li></ul><h3 id="监督管理等相关内容"><a href="#监督管理等相关内容" class="headerlink" title="监督管理等相关内容"></a>监督管理等相关内容</h3><ul><li>相关市场主体报送落实情况和工作计划</li><li>明确对银行、支付机构、清算机构的违反行为相关罚则</li></ul><h2 id="解读"><a href="#解读" class="headerlink" title="解读"></a>解读</h2><p>该条法主要是解决：打击跨境赌博、电信诈骗等违法犯罪活动，切断黑灰产业资金链；相关的跨境赌博新闻可以参考：<a href="http://www.cyberpolice.cn/wfjb/html/zcjd/20200701/4739.shtml" target="_blank" rel="noopener">http://www.cyberpolice.cn/wfjb/html/zcjd/20200701/4739.shtml</a></p><p>现如今的条码支付或者叫二维码大家更熟知，大家的微信或者支付宝的二维码是有付款功能的，所以很多跑分平台（码商）利用大量个人收款条码来化整为零，从而给监管带来很大的难度。大概的操作流程请看下图；其资金的流向从原来原来的客户到支付机构的流向，转化为客户向客户C2C的流向了；</p><p><img src="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/%E8%B7%91%E5%88%86.png" alt="跑分平台与赌博平台"></p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.pbc.gov.cn/tiaofasi/144941/144979/3941920/4035719/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《中国人民银行关于加强支付受理终端及相关业务管理的通知（征求意见稿）》&lt;/a&gt; 是既 &lt;a href=&quot;/Payment/法规/rules-pboc-no21/index.html&quot;&gt;21号文 &lt;/a&gt; 之后，又一部关于支付受理终端的法规。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+    <category term="终端" scheme="https://lianyouli.gitee.io/tags/%E7%BB%88%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>21号文</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no21/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no21/</id>
+    <published>2020-08-02T02:16:22.000Z</published>
+    <updated>2020-08-23T10:07:46.036Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>缩写或简称泛滥的地方，非金融莫属了。21号文的全称是：中国人民银行关于强化银行卡受理终端安全管理的通知（银发〔2017〕21号）；看完觉得还是21号文更好交流。该规范规范了银行卡受理终端。</p></blockquote><a id="more"></a><h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><p><a href="http://www.pbc.gov.cn/tiaofasi/144941/3581332/3589575/index.html" target="_blank" rel="noopener">21号文</a></p><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><ul><li>加强终端安全管理</li><li>提升支付风险防控管理</li><li>防范电信网络诈骗以及伪卡欺诈</li><li>切实保护人民群众的财产安全和合法权益</li></ul><h3 id="措施"><a href="#措施" class="headerlink" title="措施"></a>措施</h3><h4 id="交易报文"><a href="#交易报文" class="headerlink" title="交易报文"></a>交易报文</h4><p>交易报文在下面的场景中需要包含必需的内容</p><table><thead><tr><th></th><th>ATM</th><th>POS</th></tr></thead><tbody><tr><td>本代本</td><td>- 终端代码</td><td>- 受理机构编码<br>- 商户编码<br>- 终端编码<br>- 终端序列号<br>- 终端应用版本编号</td></tr><tr><td>本代他</td><td>- 受理机构编码<br>- 终端编码</td><td>同上</td></tr></tbody></table><h4 id="受理终端注册管理"><a href="#受理终端注册管理" class="headerlink" title="受理终端注册管理"></a>受理终端注册管理</h4><h5 id="管理平台"><a href="#管理平台" class="headerlink" title="管理平台"></a>管理平台</h5><p>清算机构搭建受理终端注册管理平台，商业银行或者支付机构在其管理平台上注册终端信息。</p><h5 id="注册数据规范"><a href="#注册数据规范" class="headerlink" title="注册数据规范"></a>注册数据规范</h5><p>同步文件即商业银行或者支付机构在管理平台上的提交的终端信息文件，反馈文件即管理平台反馈给注册方的信息文件，主要包括了概要统计信息，例如总条数，成功条数，拒绝条数；如果有拒绝记录，则包括了拒绝记录的原始记录及其拒绝原因。</p><p>POS终端是需要商户信息的，因为POS是商户收单的机具。</p><table><thead><tr><th>ATM</th><th>POS</th></tr></thead><tbody><tr><td>ATM终端注册同步文件<br>ATM终端注册反馈文件</td><td>POS终端注册同步文件<br>POS终端注册反馈文件</td></tr><tr><td></td><td>商户注册同步文件<br>商户注册反馈文件</td></tr></tbody></table><h5 id="时间要求"><a href="#时间要求" class="headerlink" title="时间要求"></a>时间要求</h5><ul><li>新入网ATM终端至少于布放或变更前一个工作日完成终端信息注册</li><li>新入网POS终端至少于布放或变更后两个工作日完成终端信息注册</li></ul><h4 id="终端产品质量管理"><a href="#终端产品质量管理" class="headerlink" title="终端产品质量管理"></a>终端产品质量管理</h4><p>终端产品需要符合国家标准和金融行业标准</p><h4 id="受理终端支付风险防控"><a href="#受理终端支付风险防控" class="headerlink" title="受理终端支付风险防控"></a>受理终端支付风险防控</h4><ul><li>信息校验</li><li>风险监控</li><li>联动防控</li><li>密钥管理</li></ul><h2 id="解读"><a href="#解读" class="headerlink" title="解读"></a>解读</h2><p>该条法更多在于解决： 防范电信网络诈骗以及伪卡欺诈 ，因为近10年电信诈骗特别猖狂且疯狂增长，可以参考 <a href="https://www.sohu.com/a/114330177_454426/" target="_blank" rel="noopener">https://www.sohu.com/a/114330177_454426/</a> ；伪卡欺诈，可以参考：<a href="https://www.sohu.com/a/146377196_120702" target="_blank" rel="noopener">https://www.sohu.com/a/146377196_120702</a></p><p>同时参考银联最近的数据，伪卡欺诈依旧是主要的欺诈，不过非面对面欺诈呈逐年递增势头。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;缩写或简称泛滥的地方，非金融莫属了。21号文的全称是：中国人民银行关于强化银行卡受理终端安全管理的通知（银发〔2017〕21号）；看完觉得还是21号文更好交流。该规范规范了银行卡受理终端。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+    <category term="终端" scheme="https://lianyouli.gitee.io/tags/%E7%BB%88%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>银行卡清算机构管理办法</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-clearing/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-clearing/</id>
+    <published>2020-07-26T02:49:38.000Z</published>
+    <updated>2020-08-23T10:53:00.257Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>法律法规枯燥之中又妙趣横生；因为它定义了规则。</p><p>《银行卡清算机构管理办法》对很多人支付行业的从业人员都无关紧要，因为它是清算机构而且基本是高层需要关心的。对于像鄙人这样的一个小螺丝钉，读一下此法规，虽然理解不是很透切，只能说对公司的启动以及运营等有个粗略的了解。</p></blockquote><a id="more"></a><p><a href="http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/3077866/index.html" target="_blank" rel="noopener">银行卡清算机构管理办法</a></p><p><img src="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-clearing/rules_pboc_clearing_mindmap.svg" alt="脑图"></p><p>所以最慢成功的批准开业周期是1年7个月（30d + 90d + 1y + 90d），那最完美的最快速的批准开业周期就很难说了，一年算是好的了，因为一个清算交易系统以及相关的核心系统在一年内搞定可能也算是丰功伟绩了，更不用说搞定各种监管要求。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;法律法规枯燥之中又妙趣横生；因为它定义了规则。&lt;/p&gt;
+&lt;p&gt;《银行卡清算机构管理办法》对很多人支付行业的从业人员都无关紧要，因为它是清算机构而且基本是高层需要关心的。对于像鄙人这样的一个小螺丝钉，读一下此法规，虽然理解不是很透切，只能说对公司的启动以及运营等有个粗略的了解。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Informatica退出中国大陆市场</title>
+    <link href="https://lianyouli.gitee.io/%E9%9D%99%E5%A4%9C%E6%80%9D/thinking-infa-withdrawal/"/>
+    <id>https://lianyouli.gitee.io/%E9%9D%99%E5%A4%9C%E6%80%9D/thinking-infa-withdrawal/</id>
+    <published>2020-07-17T14:45:22.000Z</published>
+    <updated>2020-07-18T13:52:36.909Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>2020年好像开年不利，各种灾难接踵而至，例如全球新型冠状病毒肺炎，洪灾等；而最近听朋友说Informatica退出中国大陆市场，有点震惊，不管什么原因，终究是有些无奈与无力。</p></blockquote><a id="more"></a><p>我是从Informatica出来的，来Informatica工作也开启了我的上海之旅，而且在Informatica结识了很多的国内国外和港澳台朋友，Informatica的<strong>INFAmily</strong>文化是成功的，不仅仅是员工有归属感，而且员工的家人也有归属感；因为公司从来没有忘记背后支持员工的家属，家属的医疗保险和员工是一样的，而且非常非常好；每次员工生日有蛋糕一起庆祝，员工家属生日有购物卡；而且每年GC Kickoff meeting是给家属也考虑进去的，前面几天员工开会，员工家属就去当地旅游，后面大家一起活动；关键是家里有喜事等，公司都有礼物准备。真的非常人性化的文化。</p><p>很多人会问，为什么如此之好的福利，还是有人会离职，例如我自己。其实每个人都有自己的职业规划，如果你想去外面闯荡，Informatica也是祝福你的，因为你出去了，只会扩大Informatica的影响力。这个是我提出离职时，某位老板告诉我的，让我不用有任何心理负担。</p><p>有人问，如果Informatica退出中国大陆市场，对我们离职的人或者即将被离职的人来说有什么影响；影响肯定是有的，但是不会是很大的，因为Informatica招聘进来的人都是各行各业的行家，大家都不是完全依赖于工具了，都有一套自己的思想和快速学习适应变化的能力，这就是每个人的核心竞争力；换一个跑道，依然可以适应和胜任。</p><p>最后，我知道还在Informatica里的大陆同事现在很难过，还在消化。但是我相信你们是最棒的，在新的事业里前途似锦，万事如意！</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;2020年好像开年不利，各种灾难接踵而至，例如全球新型冠状病毒肺炎，洪灾等；而最近听朋友说Informatica退出中国大陆市场，有点震惊，不管什么原因，终究是有些无奈与无力。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="静夜思" scheme="https://lianyouli.gitee.io/categories/%E9%9D%99%E5%A4%9C%E6%80%9D/"/>
+    
+    
+    <category term="静夜思" scheme="https://lianyouli.gitee.io/tags/%E9%9D%99%E5%A4%9C%E6%80%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ATM取款</title>
+    <link href="https://lianyouli.gitee.io/Payment/payment-trading-scenario/"/>
+    <id>https://lianyouli.gitee.io/Payment/payment-trading-scenario/</id>
+    <published>2020-07-04T14:19:50.000Z</published>
+    <updated>2020-08-23T09:21:58.608Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>如果要使用现金，则需要将钱从卡中取出来，当然，取钱的途径很多， 例如1. 从柜台取钱； 2. 从ATM取钱；3.转账给他人，他人给现金给你；4. 去商户消费，然后商户给你现金。这里只讨论第2点。</p></blockquote><a id="more"></a><h2 id="两种场景"><a href="#两种场景" class="headerlink" title="两种场景"></a>两种场景</h2><h3 id="不跨行"><a href="#不跨行" class="headerlink" title="不跨行"></a>不跨行</h3><p>A银行的卡在A银行自己的ATM上取款</p><p>不跨行的情况，该笔ATM取款交易不需要经过卡组织的，直接是该银行自己处理。 有些有银行在有些场景也会收取手续费。例如，上海办理的卡，到广州的ATM取款就会收取手续费。</p><h3 id="跨行"><a href="#跨行" class="headerlink" title="跨行"></a>跨行</h3><p>A银行的卡在B银行的ATM上取款</p><p>因为涉及到跨行交易，那么资金需要经过卡组织进行批量清算，因此卡组织需要收取清算费，收单行需要收取交换费。</p><h2 id="交易流程"><a href="#交易流程" class="headerlink" title="交易流程"></a>交易流程</h2><p>这里以跨行的场景为例，A银行就是发卡行（Issuer），B银行就是收单行（Acquirer)，这里以取款1000元为例。</p><ol><li>B - ATM 向 卡组织 发起请求</li><li>卡组织将请求转发给A</li><li>A将请求信息回复给卡组织</li><li>卡组织将信息回复给B-ATM</li></ol><p>如果上述4步种任何一方出现了中断，例如第4步中，卡组织无法连接到B-ATM，无法将信息回复给B，那么卡组织这里会发起冲正交易；冲正交易会将原交易给冲正了，不会出现说你钱没有取到，但是卡里已经扣了的情况。</p><h2 id="交易数据分析"><a href="#交易数据分析" class="headerlink" title="交易数据分析"></a>交易数据分析</h2><h3 id="交易文件类型"><a href="#交易文件类型" class="headerlink" title="交易文件类型"></a>交易文件类型</h3><p>ATM取款这种交易会出现在COM类文件中，例如OOM/COMN。同时，同一笔交易，卡组织会生产两个文件：ICOM和ACOM，这两个文件大部分相同，部分不同，ICOM给银行A，ACOM给银行B。</p><p>所以区分一个文件到底是给收单机构还是给发卡机构，可以从交易文件的文件名上直接判断。 如果没有文件名的情况下，如何判断ATM取款数据到底是发卡机构还是收单机构的呢？</p><p>答案是可以的，1） 根据交易类型，以及Fee（费）的借贷标志; 2）如果是COMN类型的，可以直接看扩展字段，有些字段是发卡方文件独有的，例如商户名称以及Token；有些字段是收单方文件所独有的，例如订单号，当然，不是所有支付场景，扩展字段中独有字段都有值。</p><p>第1种情况，针对ATM取现，交换费（Fee1）和转接清算费（Fee2）的借贷记标志，对于发卡行，它需要支付这两个费用给卡组织和收单行，所以对于这两个Fee的借贷记标志是D。但是对于收单机构，则没有该费用。</p><h3 id="交易类型"><a href="#交易类型" class="headerlink" title="交易类型"></a>交易类型</h3><p>如果从交易数据中判断该笔交易为ATM取款，那从哪些维度可以来确定呢？</p><ol><li>终端类型（Terminal Type) 如果是ATM取款，那么终端类型应该是ATM  <!-- 01 -->;</li><li>交易类型 交易处理码中前两位是交易类型为现金 <!-- 01 -->；</li><li>交易的报文类型 从报文类型标识符来看该笔交易的报文类型为请求类交易：0200，而不是ATM取款发生冲正的时候冲正类交易：0420。</li><li>服务点条件码 是交易处理码（第2点）的补充，其值应该是自助终端 <!-- 02 -->。</li></ol><p>综上，从这4个维度就可以将一笔交易确定为ATM取款。当然，如果商户类型代码存在，或者准确，那么可以直接使用商户类型代码来确定也是可以的。</p><h2 id="费用划付"><a href="#费用划付" class="headerlink" title="费用划付"></a>费用划付</h2><p>ATM取现的费用，由发卡机构支付。即：</p><ol><li>收单机构收取交换费；</li><li>卡组织收取转接清算费。</li></ol><h2 id="一点思考"><a href="#一点思考" class="headerlink" title="一点思考"></a>一点思考</h2><p>一般来说，一张卡整存整取，卡内不留余额等情况可能参与了洗钱活动；可以看<strong>《反腐风云》</strong>赛马会那部。</p><p>另外，引言的第4点是套现，<em>违法行为</em>。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;如果要使用现金，则需要将钱从卡中取出来，当然，取钱的途径很多， 例如1. 从柜台取钱； 2. 从ATM取钱；3.转账给他人，他人给现金给你；4. 去商户消费，然后商户给你现金。这里只讨论第2点。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="交易场景" scheme="https://lianyouli.gitee.io/tags/%E4%BA%A4%E6%98%93%E5%9C%BA%E6%99%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>猎狐</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/payment-tv-hunt-fox/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/payment-tv-hunt-fox/</id>
+    <published>2020-06-12T13:24:08.000Z</published>
+    <updated>2020-08-23T09:21:53.543Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>“猎狐” 经济犯罪类电视剧，还是非常精彩的，不管是表演，有我喜欢的演员；当然还有剧情，对于本人刚进入支付行业的新人来说，里面很多的经济犯罪行为值得学习。</p></blockquote><a id="more"></a><p><img src="/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/payment-tv-hunt-fox/540x303.jpg" alt="猎狐剧照，来源于百度"></p><p>猎狐中有很多经济犯罪行为，</p><ol><li><p>操纵股市</p><p>例如利用媒体散布肝克净研发消息，然后股民为之兴奋，股价上涨，然后王柏林趁机抛售手中的股票，从而大赚一笔；</p></li><li><p>贷款诈骗<br>王柏林以回扣诱惑了支行主任，骗取贷款；哈哈，最搞笑的，是支行行长在这部剧里真的一点主见都没有。全程都被支行主任玩得团团转，而且最后还得被侮辱。</p></li><li><p>集资诈骗</p><p>马世才以理财高收益为诱饵，骗取人钱财</p></li></ol><p>最后的剧情是境外较量，比较精彩，美国看重的是申请绿卡的人在美国的行为是否违法，不管申请人以前是否违法等，所以最后的突破口，就是以王柏林的真实财产证明与其申报的财产差异巨口为突破口，然后成功打破王柏林的绿卡梦。</p><p>整个电视剧看完，真的还是非常有价值的，涨涨见识，已经看看经济犯罪的一般行为以及如何故事有趣。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;“猎狐” 经济犯罪类电视剧，还是非常精彩的，不管是表演，有我喜欢的演员；当然还有剧情，对于本人刚进入支付行业的新人来说，里面很多的经济犯罪行为值得学习。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="电视剧" scheme="https://lianyouli.gitee.io/categories/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="经济犯罪" scheme="https://lianyouli.gitee.io/tags/%E7%BB%8F%E6%B5%8E%E7%8A%AF%E7%BD%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>支付系统架构</title>
+    <link href="https://lianyouli.gitee.io/Payment/payment-architecture/"/>
+    <id>https://lianyouli.gitee.io/Payment/payment-architecture/</id>
+    <published>2020-06-07T10:59:44.000Z</published>
+    <updated>2020-08-23T09:22:21.114Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这个是我认为的支付系统架构，后续再完善。</p></blockquote><a id="more"></a><!-- ![支付架构](payment-architecture/architecture.png)-->]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这个是我认为的支付系统架构，后续再完善。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>支付战争</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E4%B9%A6%E7%B1%8D/payment-book-paypal-war/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E4%B9%A6%E7%B1%8D/payment-book-paypal-war/</id>
+    <published>2020-05-31T12:55:25.000Z</published>
+    <updated>2020-08-23T09:22:15.277Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>支付战争，其英文 The Paypal War，更能体现其故事的主体是什么。Paypal 出来的人都是支付大牛，所以，业界都称为Paypal黑帮。所以支付战争非常值得一探。</p></blockquote><a id="more"></a><p>《支付战争》这本书看完了很久了，这本书非常建议自己去看看，因为它是Paypal创业时营销核心人员，所以本书以回忆和故事的方式来展现整个Paypal打下支付这一半壁江山的过程，可谓跌宕起伏，每一步都扣人心弦；好多都忘记了，后面有时间在看一遍。</p><p>Peter去斯坦福大学做了“市场全球化和政治自由之间的联系”的演讲，有个IT小伙子Max去听了，并且线下和Peter聊了，结果两人一聊就一拍即合，搞了一个加密的公司；这种场景大家听过很多了吧，例如谷歌的创始人也是听了演讲成了谷歌搜索；回到故事，他们后面转变成支付公司confinity，其宗旨就是做支付领域的微软，统治世界。后面他们借助Ebay的拍卖，然后占据了支付市场核心地方。当然后面又和Ebay自己的支付竞争，然后又和X.COM较量，其中，X.COM就有现在搞火箭飞上天的Elon Musk;最后和X.COM合并了，不过最后的结局大家都是知道的，被Ebay收购了。</p><p>其实故事线基本上可以从上面一段话可以简述，其中有几句非常经典的语句个人觉得非常好</p><blockquote><p>未来的银行只是有银行牌照的技术公司</p><p>交易是商业核心行为，商业最终都是交易，而交易都是通过支付完成</p><p>为了保护消费者活动而建立的机构却为了满足政府越来越细致、越来越复杂的要求让一个又一个行业付出了沉重的代价</p></blockquote><p>其中有很多值得学习的地方</p><ol><li>团队开放</li><li>信任</li><li>信念</li><li>创新</li></ol><p>从整个历程来看，每一次合并都有一些核心人员的离去，合并很多时候意味着价值观的转变，而且这些人都有一些情结或者傲娇，一旦不符合自己的价值观或者不再是自己所追寻的，就会离去；其实没有离去的人，可能也没有以前那么坚定或者全心全意的投入了，所以现在就很能理解为什么一流公司靠文化，二流公司靠流程，三流公司靠能人。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;支付战争，其英文 The Paypal War，更能体现其故事的主体是什么。Paypal 出来的人都是支付大牛，所以，业界都称为Paypal黑帮。所以支付战争非常值得一探。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="书籍" scheme="https://lianyouli.gitee.io/categories/Payment/%E4%B9%A6%E7%B1%8D/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+  </entry>
+  
+</feed>

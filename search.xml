@@ -8,7 +8,7 @@
       <link href="/Payment/payment-clearing-architecture/"/>
       <url>/Payment/payment-clearing-architecture/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>还在整理中</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>这里只是我根据央行发布的支付体系运行总体情况报告整理得来的信息，对一些系统或者周边系统没有深入了解到。</p></blockquote><p><img src="/Payment/payment-clearing-architecture/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F.png" alt="支付系统信息"></p><blockquote><p>CIPS 是人民币国际化的重要部分</p><p>其他清算系统也有美国运通一个位置了，因为美国运通也拿到清算牌照，正式营业了。</p></blockquote><p><img src="/Payment/payment-clearing-architecture/%E6%B8%85%E7%AE%97%E6%9C%BA%E6%9E%84%E6%9E%B6%E6%9E%84.png" alt="架构"></p>]]></content>
       
       
       <categories>

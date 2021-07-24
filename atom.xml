@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>联友の周记</title>
+  <title>联友的Blog</title>
   <icon>https://lianyouli.gitee.io/icon.png</icon>
   <subtitle>密涅瓦的猫头鹰在黄昏起飞</subtitle>
   <link href="https://lianyouli.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://lianyouli.gitee.io/"/>
-  <updated>2020-11-09T12:50:28.282Z</updated>
+  <updated>2021-04-19T13:36:01.056Z</updated>
   <id>https://lianyouli.gitee.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TLS 模式</title>
+    <link href="https://lianyouli.gitee.io/uncategorized/tls-mode/"/>
+    <id>https://lianyouli.gitee.io/uncategorized/tls-mode/</id>
+    <published>2021-04-19T13:10:19.000Z</published>
+    <updated>2021-04-19T13:36:01.056Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="TLS模式"><a href="#TLS模式" class="headerlink" title="TLS模式"></a>TLS模式</h1><p>有三种模式，见下图</p><ol><li><p>客户端直接忽略TLS证书访问服务</p><p>例如使用curl -k -tlsv1 等参数可以忽略证书验证直接访问。即客户端不检查证书的有效性和合法性。即此时，客户端不检查服务端的网址合法性和有效性，同时网络传输也是明文。</p></li><li><p>客户端使用TLS证书访问服务</p><p>此场景是最常见的，即客户端需要检查服务端证书的合法性和有效性，传输也是加密的。</p></li><li><p>双向认证</p><p>此时除了服务端证书需要提供给客户端，同时客户端的证书需要添加到服务端。登录时，可以直接使用证书验证直接登录。另外，例如U盾等也是双向认证的应用</p></li></ol><p><img src="/uncategorized/tls-mode/tls.jpg" alt="tls"></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;TLS模式&quot;&gt;&lt;a href=&quot;#TLS模式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="IT" scheme="https://lianyouli.gitee.io/tags/IT/"/>
+    
+  </entry>
   
   <entry>
     <title>云闪付</title>
@@ -246,33 +271,6 @@
     <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
     
     <category term="交易场景" scheme="https://lianyouli.gitee.io/tags/%E4%BA%A4%E6%98%93%E5%9C%BA%E6%99%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>猎狐</title>
-    <link href="https://lianyouli.gitee.io/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/payment-tv-hunt-fox/"/>
-    <id>https://lianyouli.gitee.io/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/payment-tv-hunt-fox/</id>
-    <published>2020-06-12T13:24:08.000Z</published>
-    <updated>2020-08-23T09:21:53.543Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>“猎狐” 经济犯罪类电视剧，还是非常精彩的，不管是表演，有我喜欢的演员；当然还有剧情，对于本人刚进入支付行业的新人来说，里面很多的经济犯罪行为值得学习。</p></blockquote><a id="more"></a><p><img src="/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/payment-tv-hunt-fox/540x303.jpg" alt="猎狐剧照，来源于百度"></p><p>猎狐中有很多经济犯罪行为，</p><ol><li><p>操纵股市</p><p>例如利用媒体散布肝克净研发消息，然后股民为之兴奋，股价上涨，然后王柏林趁机抛售手中的股票，从而大赚一笔；</p></li><li><p>贷款诈骗<br>王柏林以回扣诱惑了支行主任，骗取贷款；哈哈，最搞笑的，是支行行长在这部剧里真的一点主见都没有。全程都被支行主任玩得团团转，而且最后还得被侮辱。</p></li><li><p>集资诈骗</p><p>马世才以理财高收益为诱饵，骗取人钱财</p></li></ol><p>最后的剧情是境外较量，比较精彩，美国看重的是申请绿卡的人在美国的行为是否违法，不管申请人以前是否违法等，所以最后的突破口，就是以王柏林的真实财产证明与其申报的财产差异巨口为突破口，然后成功打破王柏林的绿卡梦。</p><p>整个电视剧看完，真的还是非常有价值的，涨涨见识，已经看看经济犯罪的一般行为以及如何故事有趣。</p>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;“猎狐” 经济犯罪类电视剧，还是非常精彩的，不管是表演，有我喜欢的演员；当然还有剧情，对于本人刚进入支付行业的新人来说，里面很多的经济犯罪行为值得学习。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
-    
-    <category term="电视剧" scheme="https://lianyouli.gitee.io/categories/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
-    
-    
-    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
-    
-    <category term="经济犯罪" scheme="https://lianyouli.gitee.io/tags/%E7%BB%8F%E6%B5%8E%E7%8A%AF%E7%BD%AA/"/>
     
   </entry>
   

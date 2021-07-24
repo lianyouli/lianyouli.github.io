@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>TLS 模式</title>
+      <link href="/uncategorized/tls-mode/"/>
+      <url>/uncategorized/tls-mode/</url>
+      
+        <content type="html"><![CDATA[<h1 id="TLS模式"><a href="#TLS模式" class="headerlink" title="TLS模式"></a>TLS模式</h1><p>有三种模式，见下图</p><ol><li><p>客户端直接忽略TLS证书访问服务</p><p>例如使用curl -k -tlsv1 等参数可以忽略证书验证直接访问。即客户端不检查证书的有效性和合法性。即此时，客户端不检查服务端的网址合法性和有效性，同时网络传输也是明文。</p></li><li><p>客户端使用TLS证书访问服务</p><p>此场景是最常见的，即客户端需要检查服务端证书的合法性和有效性，传输也是加密的。</p></li><li><p>双向认证</p><p>此时除了服务端证书需要提供给客户端，同时客户端的证书需要添加到服务端。登录时，可以直接使用证书验证直接登录。另外，例如U盾等也是双向认证的应用</p></li></ol><p><img src="/uncategorized/tls-mode/tls.jpg" alt="tls"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> IT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>云闪付</title>
       <link href="/Payment/payment-yunshanfu/"/>
       <url>/Payment/payment-yunshanfu/</url>

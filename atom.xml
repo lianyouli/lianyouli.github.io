@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>联友的Blog</title>
+  <icon>https://lianyouli.gitee.io/icon.png</icon>
+  <subtitle>密涅瓦的猫头鹰在黄昏起飞</subtitle>
+  <link href="https://lianyouli.gitee.io/atom.xml" rel="self"/>
+  
+  <link href="https://lianyouli.gitee.io/"/>
+  <updated>2022-01-23T09:25:42.726Z</updated>
+  <id>https://lianyouli.gitee.io/</id>
+  
+  <author>
+    <name>李联友</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rules-pboc-no259</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no259/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no259/</id>
+    <published>2022-01-23T08:49:58.000Z</published>
+    <updated>2022-01-23T09:25:42.726Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><a href="http://www.pbc.gov.cn/tiaofasi/144941/3581332/4359567/index.html" target="_blank" rel="noopener">259号文</a>是既21号之后针对终端再次补充，更加严格了，当然此次也针对了条码支付终端相关的要求。足以看出终端的重要性，也侧面反映了现在洗钱、涉黑涉黄等非法行为泛滥。</p><p>259号文是提纲挈领的法规，那么中国支付清算协会关于印发<a href="http://www.pcac.org.cn/eportal/ui?pageId=598041&articleKey=614091&columnId=595027" target="_blank" rel="noopener">《特约商户巡检指引》</a>的通知就针对特约商户明确了巡检的方式、周期、内容和频率等内容。</p></blockquote><a id="more"></a><h1 id="259号文"><a href="#259号文" class="headerlink" title="259号文"></a>259号文</h1><p>支付受理终端业务管理其大多数内容还是延续21号文，其总结起来就是<strong>1：1：1</strong>，即：</p><blockquote><p>一台银行卡受理终端对应一个终端序列号，对应一个特约商户</p></blockquote><p>条码支付受理终端及相关业务要求了 条码的场景和用途。</p><p>例如个人静态收款条码不可以远程非面对面收款，这个也有效扼制了现在微信支付宝之类的跑分等洗钱行为。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.pbc.gov.cn/tiaofasi/144941/3581332/4359567/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;259号文&lt;/a&gt;是既21号之后针对终端再次补充，更加严格了，当然此次也针对了条码支付终端相关的要求。足以看出终端的重要性，也侧面反映了现在洗钱、涉黑涉黄等非法行为泛滥。&lt;/p&gt;
+&lt;p&gt;259号文是提纲挈领的法规，那么中国支付清算协会关于印发&lt;a href=&quot;http://www.pcac.org.cn/eportal/ui?pageId=598041&amp;articleKey=614091&amp;columnId=595027&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《特约商户巡检指引》&lt;/a&gt;的通知就针对特约商户明确了巡检的方式、周期、内容和频率等内容。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+    <category term="终端" scheme="https://lianyouli.gitee.io/tags/%E7%BB%88%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>it_issue_jupyter_nignix_400</title>
+    <link href="https://lianyouli.gitee.io/IT/Issues/it-issue-jupyter-nignix-400/"/>
+    <id>https://lianyouli.gitee.io/IT/Issues/it-issue-jupyter-nignix-400/</id>
+    <published>2021-09-05T00:32:57.000Z</published>
+    <updated>2021-09-05T00:50:18.716Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="jupyter-kernel一直连接不上服务器"><a href="#jupyter-kernel一直连接不上服务器" class="headerlink" title="jupyter kernel一直连接不上服务器"></a>jupyter kernel一直连接不上服务器</h1><p>Docker上拉取了hortonworks/sandbox-hdp 和 hortonworks/sandbox-proxy, 在sandbox-hdp上安装了jupyter来写一些pyspark的代码。</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>其中sandbox-proxy做了如下配置</p><h3 id="HDP3-sandbox-proxy-conf-d-http-hdp-conf"><a href="#HDP3-sandbox-proxy-conf-d-http-hdp-conf" class="headerlink" title="HDP3/sandbox/proxy/conf.d/http-hdp.conf"></a>HDP3/sandbox/proxy/conf.d/http-hdp.conf</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># jupyter notebook </span><br><span class="line">server &#123;</span><br><span class="line">  listen 9999;</span><br><span class="line">  server_name sandbox-hdp.hortonworks.com;</span><br><span class="line">  location / &#123;</span><br><span class="line">                proxy_pass http://sandbox-hdp:9999;</span><br><span class="line">                proxy_set_header      Host $host;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="HDP3-sandbox-proxy-proxy-deploy-sh"><a href="#HDP3-sandbox-proxy-proxy-deploy-sh" class="headerlink" title="HDP3/sandbox/proxy/proxy-deploy.sh"></a>HDP3/sandbox/proxy/proxy-deploy.sh</h3><p>新增一行-p 9999:9999 \</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">!/usr/bin/env bash</span><br><span class="line">docker rm -f sandbox-proxy 2&gt;/dev/null</span><br><span class="line">docker run --name sandbox-proxy --network=cda \</span><br><span class="line">-v /Users/arthur/Software/Docker/HDP3/assets/nginx.conf:/etc/nginx/nginx.conf \</span><br><span class="line">-v /Users/arthur/Software/Docker/HDP3/sandbox/proxy/conf.d:/etc/nginx/conf.d \</span><br><span class="line">-v /Users/arthur/Software/Docker/HDP3/sandbox/proxy/conf.stream.d:/etc/nginx/conf.stream.d \</span><br><span class="line">-p 1080:1080 \</span><br><span class="line">-p 9999:9999 \</span><br><span class="line">...</span><br></pre></td></tr></table></figure><h2 id="浏览器访问，jupyter后台错误日志"><a href="#浏览器访问，jupyter后台错误日志" class="headerlink" title="浏览器访问，jupyter后台错误日志"></a>浏览器访问，jupyter后台错误日志</h2><p>NotebookApp] 400 GET /api/kernels/</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">sh-4.2<span class="comment"># jupyter-notebook --allow-root</span></span><br><span class="line">[W 23:05:07.281 NotebookApp] Config option `use_redirect_file` not recognized by `NotebookApp`.</span><br><span class="line">[I 23:05:07.462 NotebookApp] Serving notebooks from <span class="built_in">local</span> directory: /root/notebook</span><br><span class="line">[I 23:05:07.462 NotebookApp] The Jupyter Notebook is running at:</span><br><span class="line">[I 23:05:07.462 NotebookApp] http://sandbox-hdp.hortonworks.com:9999/?token=9c46a4fbfa4a432be0275f2381cd24543ba763566c0cc8fe</span><br><span class="line">[I 23:05:07.462 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</span><br><span class="line">[W 23:05:07.466 NotebookApp] No web browser found: could not locate runnable browser.</span><br><span class="line">[C 23:05:07.467 NotebookApp] </span><br><span class="line">    </span><br><span class="line">    To access the notebook, open this file <span class="keyword">in</span> a browser:</span><br><span class="line">        file:///root/.<span class="built_in">local</span>/share/jupyter/runtime/nbserver-38953-open.html</span><br><span class="line">    Or copy and paste one of these URLs:</span><br><span class="line">        http://sandbox-hdp.hortonworks.com:9999/?token=9c46a4fbfa4a432be0275f2381cd24543ba763566c0cc8fe</span><br><span class="line">[E 23:05:14.835 NotebookApp] Could not open static file <span class="string">''</span></span><br><span class="line">[W 23:05:15.184 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.18.0.2) 14.91ms referer=http://sandbox-hdp.hortonworks.com:9999/notebooks/Untitled1.ipynb?kernel_name=python2</span><br><span class="line">[I 23:05:15.786 NotebookApp] Kernel started: eae1b42e-120e-4d69-9266-c06432677d5a</span><br><span class="line">[I 23:05:16.372 NotebookApp] Adapting to protocol v5.1 <span class="keyword">for</span> kernel eae1b42e-120e-4d69-9266-c06432677d5a</span><br><span class="line">[W 23:05:16.375 NotebookApp] 400 GET /api/kernels/eae1b42e-120e-4d69-9266-c06432677d5a/channels?session_id=0fea190ca5e94abd89500020f29a66fb (172.18.0.2) 521.39ms referer=None</span><br><span class="line">[W 23:05:17.437 NotebookApp] Replacing stale connection: eae1b42e-120e-4d69-9266-c06432677d5a:0fea190ca5e94abd89500020f29a66fb</span><br><span class="line">[W 23:05:18.140 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.18.0.2) 6.56ms referer=http://sandbox-hdp.hortonworks.com:9999/tree?token=9c46a4fbfa4a432be0275f2381cd24543ba763566c0cc8fe</span><br><span class="line">[W 23:05:20.220 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.18.0.2) 4.17ms referer=http://sandbox-hdp.hortonworks.com:9999/notebooks/Untitled1.ipynb</span><br><span class="line">[I 23:05:20.443 NotebookApp] Adapting to protocol v5.1 <span class="keyword">for</span> kernel eae1b42e-120e-4d69-9266-c06432677d5a</span><br><span class="line">[W 23:05:20.444 NotebookApp] 400 GET /api/kernels/eae1b42e-120e-4d69-9266-c06432677d5a/channels?session_id=ed975e0dfee44503a3a2405dac3718cc (172.18.0.2) 3.54ms referer=None</span><br><span class="line">[W 23:05:21.516 NotebookApp] Replacing stale connection: eae1b42e-120e-4d69-9266-c06432677d5a:ed975e0dfee44503a3a2405dac3718cc</span><br><span class="line">[W 23:06:23.550 NotebookApp] Replacing stale connection: eae1b42e-120e-4d69-9266-c06432677d5a:ed975e0dfee44503a3a2405dac3718cc</span><br></pre></td></tr></table></figure><h2 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h2><p><a href="https://www.cnblogs.com/ycc1/p/14229534.html" target="_blank" rel="noopener">Virya的博客</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># jupyter notebook</span></span><br><span class="line">server &#123;</span><br><span class="line">  listen 9999;</span><br><span class="line">  server_name sandbox-hdp.hortonworks.com;</span><br><span class="line">  location / &#123;</span><br><span class="line">                proxy_pass http://sandbox-hdp:9999;</span><br><span class="line">                proxy_set_header      Host <span class="variable">$host</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  location ~ /api/kernels/ &#123;</span><br><span class="line">                proxy_pass            http://sandbox-hdp:9999;</span><br><span class="line">                proxy_set_header      Host <span class="variable">$host</span>;</span><br><span class="line"></span><br><span class="line">                proxy_http_version    1.1;  <span class="comment"># websocket support</span></span><br><span class="line">                proxy_set_header      Upgrade <span class="string">"websocket"</span>;</span><br><span class="line">                proxy_set_header      Connection <span class="string">"Upgrade"</span>;</span><br><span class="line">                proxy_read_timeout    86400;</span><br><span class="line">        &#125;</span><br><span class="line">  location ~ /terminals/ &#123;</span><br><span class="line">                proxy_pass            http://sandbox-hdp:9999;</span><br><span class="line">                proxy_set_header      Host <span class="variable">$host</span>;</span><br><span class="line"></span><br><span class="line">                proxy_http_version    1.1;  <span class="comment"># websocket support</span></span><br><span class="line">                proxy_set_header      Upgrade <span class="string">"websocket"</span>;</span><br><span class="line">                proxy_set_header      Connection <span class="string">"Upgrade"</span>;</span><br><span class="line">                proxy_read_timeout    86400;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;jupyter-kernel一直连接不上服务器&quot;&gt;&lt;a href=&quot;#jupyter-kernel一直连接不上服务器&quot; class=&quot;headerlink&quot; title=&quot;jupyter kernel一直连接不上服务器&quot;&gt;&lt;/a&gt;jupyter</summary>
+        
+      
+    
+    
+    
+    <category term="IT" scheme="https://lianyouli.gitee.io/categories/IT/"/>
+    
+    <category term="Issues" scheme="https://lianyouli.gitee.io/categories/IT/Issues/"/>
+    
+    
+    <category term="jupyter" scheme="https://lianyouli.gitee.io/tags/jupyter/"/>
+    
+    <category term="nginx" scheme="https://lianyouli.gitee.io/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TLS 模式</title>
+    <link href="https://lianyouli.gitee.io/uncategorized/tls-mode/"/>
+    <id>https://lianyouli.gitee.io/uncategorized/tls-mode/</id>
+    <published>2021-04-19T13:10:19.000Z</published>
+    <updated>2021-07-21T08:13:00.881Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="TLS模式"><a href="#TLS模式" class="headerlink" title="TLS模式"></a>TLS模式</h1><p>有三种模式，见下图</p><ol><li><p>客户端直接忽略TLS证书访问服务</p><p>例如使用curl -k -tlsv1 等参数可以忽略证书验证直接访问。即客户端不检查证书的有效性和合法性。即此时，客户端不检查服务端的网址合法性和有效性，同时网络传输也是明文。</p></li><li><p>客户端使用TLS证书访问服务</p><p>此场景是最常见的，即客户端需要检查服务端证书的合法性和有效性，传输也是加密的。</p></li><li><p>双向认证</p><p>此时除了服务端证书需要提供给客户端，同时客户端的证书需要添加到服务端。登录时，可以直接使用证书验证直接登录。另外，例如U盾等也是双向认证的应用</p></li></ol><p><img src="/uncategorized/tls-mode/tls.jpg" alt="tls"></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;TLS模式&quot;&gt;&lt;a href=&quot;#TLS模式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="IT" scheme="https://lianyouli.gitee.io/tags/IT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>云闪付</title>
+    <link href="https://lianyouli.gitee.io/Payment/payment-yunshanfu/"/>
+    <id>https://lianyouli.gitee.io/Payment/payment-yunshanfu/</id>
+    <published>2020-10-28T12:27:51.000Z</published>
+    <updated>2021-07-21T08:13:00.881Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="云闪付"><a href="#云闪付" class="headerlink" title="云闪付"></a>云闪付</h1><p>没错，就是你想的那个云闪付。千人千面，今天我要从卡组织的角度来看。</p><p>银联大力推广，所以云闪付涉及方方面面。</p><a id="more"></a><h2 id="付的世界"><a href="#付的世界" class="headerlink" title="付的世界"></a>付的世界</h2><h3 id="便民服务"><a href="#便民服务" class="headerlink" title="便民服务"></a>便民服务</h3><p>乘车码、公共缴费、健康码、手机充值等</p><p>国庆期间，我去杭州西湖玩，地铁入口看到提示，可以使用云闪付和支付宝乘坐地铁；本着云闪付也是我支付软件后宫佳丽之一，今天就翻她牌了；众所周知，杭州基本上是支付宝的天下，到深圳是微信的天下，坐过城市交通的深深的体会到地方城市的溺爱。关键她以国家队的形式打破了地方城市的保护；关键操作非常简单而且还打9折优惠，爱了爱了。</p><h3 id="财富管理"><a href="#财富管理" class="headerlink" title="财富管理"></a>财富管理</h3><p>信用卡还款、转账、借款、申请信用卡等</p><p>信用卡还款免手续费！支付宝或者微信还信用卡从免费到收费，广大<strong>打工人</strong>表示马爸爸你变了。</p><h3 id="政务民生"><a href="#政务民生" class="headerlink" title="政务民生"></a>政务民生</h3><p>我的社保、我的医保、税款缴纳、交通罚款等</p><p>税款缴纳竟然可以使用信用卡！这个出乎意料。</p><h3 id="购物娱乐"><a href="#购物娱乐" class="headerlink" title="购物娱乐"></a>购物娱乐</h3><p>商城、数字景区等</p><p>数字景区买门票有优惠的。</p><h3 id="境外服务"><a href="#境外服务" class="headerlink" title="境外服务"></a>境外服务</h3><p>境外海淘、境外退税、权益U赏等</p><p>这个大类里的服务点击时有Error，测试人员的鸡腿没有了吧。</p><h3 id="第三方服务"><a href="#第三方服务" class="headerlink" title="第三方服务"></a>第三方服务</h3><p>租房、猫眼电影、淘车位等</p><h2 id="角色扮演"><a href="#角色扮演" class="headerlink" title="角色扮演"></a>角色扮演</h2><p>云闪付出自银联，银联做为卡组织；单纯从卡组织的角色来看，其云闪付的定位是非常契合的。</p><p>因为卡组织有服务、协调，自律以及监督等功能；这里就只从服务角度来看，就需要集发卡、收单、商户和持卡人于一体，满足各方一部分需求，平衡各方的利益点，以共荣为目的，在一个平台上提供服务。</p><p>所以从战略方向来看，前途一片光明。可是，云闪付却干了收单的事，这个平台就不再是拧成一股绳,搏尽一份力,狠下一条心,共圆一个梦的那个平台了。</p><h2 id="世事造化"><a href="#世事造化" class="headerlink" title="世事造化"></a>世事造化</h2><p>现在支付行业环境再也不是从前了。</p><h4 id="拉新"><a href="#拉新" class="headerlink" title="拉新"></a>拉新</h4><p>以前获取一个新用户的成本非常低的；但是现在获取一个新用户的成本比较高了，你看支付宝为了获取一个为了获取新用户，给老用户的推荐奖是20元的电话费。而且从现在的互联网用户总量来看，市场差不多快饱和了。</p><h4 id="用户量为王"><a href="#用户量为王" class="headerlink" title="用户量为王"></a>用户量为王</h4><p>谁的用户量大，谁就了不得，谁就话语权就大，得用户者得天下；甚至连监管都要考虑三分，有种三国时代的携天子而以令诸侯。</p><h4 id="互联网时代"><a href="#互联网时代" class="headerlink" title="互联网时代"></a>互联网时代</h4><p>而且现在互联网的世界是不再是4321，即龙头老大老二的市场份额占比基本上是70%左右，其它的基本上还能吃饱饭。而现在第三方支付的市场份额的90%多被龙头老大老二占了，所以除了微信支付宝，剩余的就只能叫做其它了；关键是老大老二利用行业领头优势，全面围杀竞争者的反击；最后，互联网的时代是一个变化万千的时代，是一个瞬息万变的时代，是一个与监管相爱相杀的时代；很多时候，行业龙头老大老二为了抢占市场，面子上对监管服服帖帖的，背后依旧干些偷偷摸摸的事，因为惩罚的成本与其利润相比显得微不足道。</p><h4 id="卡基过渡到帐基"><a href="#卡基过渡到帐基" class="headerlink" title="卡基过渡到帐基"></a>卡基过渡到帐基</h4><p>以前基本上是卡基支付，而现在是帐户支付的时代；卡基变成了帐基的基石，上层应用更多围绕着帐户来构建丰富的生态和应用场景。</p><p>所以内因加外因，这也是为什么银联投资和市场占比来看有点不成正比的主要原因。</p><h2 id="异军突起"><a href="#异军突起" class="headerlink" title="异军突起"></a>异军突起</h2><p>国家队的云闪付这几年的大力推广，效果虽然不是那么显著，但是起色还是不错的。如果要突破，本人的愚见还是回归支付本质和卡组织的本质。深耕支付场景，广惠各个实体，互助共荣不称霸。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;云闪付&quot;&gt;&lt;a href=&quot;#云闪付&quot; class=&quot;headerlink&quot; title=&quot;云闪付&quot;&gt;&lt;/a&gt;云闪付&lt;/h1&gt;&lt;p&gt;没错，就是你想的那个云闪付。千人千面，今天我要从卡组织的角度来看。&lt;/p&gt;
+&lt;p&gt;银联大力推广，所以云闪付涉及方方面面。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>国家发展改革委 中国人民银行关于完善银行卡刷卡手续费定价机制的通知</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-96fees/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-96fees/</id>
+    <published>2020-09-09T13:48:46.000Z</published>
+    <updated>2021-07-21T08:13:00.893Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p> <a href="http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/3034338/index.html" target="_blank" rel="noopener">国家发展改革委 中国人民银行 关于完善银行卡刷卡手续费定价机制的通知</a> 俗称96费改，是因为从2016年9月6日起实施的。有此宝典，如同如来佛祖的手掌，各种费率都逃不出手掌心。</p></blockquote><a id="more"></a>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt; &lt;a href=&quot;http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/3034338/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;国家发展改革委 中国人民银行 关于完善银行卡刷卡手续费定价机制的通知&lt;/a&gt; 俗称96费改，是因为从2016年9月6日起实施的。有此宝典，如同如来佛祖的手掌，各种费率都逃不出手掌心。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>清算架构</title>
+    <link href="https://lianyouli.gitee.io/Payment/payment-clearing-architecture/"/>
+    <id>https://lianyouli.gitee.io/Payment/payment-clearing-architecture/</id>
+    <published>2020-08-23T14:50:25.000Z</published>
+    <updated>2021-07-21T08:13:00.880Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这里只是我根据央行发布的支付体系运行总体情况报告整理得来的信息，对一些系统或者周边系统还没有深入了解到。</p></blockquote><a id="more"></a><p><img src="/Payment/payment-clearing-architecture/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F.png" alt="支付系统信息"></p><blockquote><p>CIPS 是人民币国际化的重要部分</p><p>其他清算系统也有美国运通一个位置了，因为美国运通也拿到清算牌照，正式营业了。</p></blockquote><p><img src="/Payment/payment-clearing-architecture/%E6%B8%85%E7%AE%97%E6%9C%BA%E6%9E%84%E6%9E%B6%E6%9E%84.png" alt="&#39;架构&#39;"></p><p>这里这么多清算机构，是不是都懵圈了？ 在开始之前，先铺垫一点基础术语：</p><ul><li><p>实时</p><p>每一笔交易都实时处理，即来一笔交易就处理一笔。</p></li><li><p>批量</p><p>交易累积一段时间做处理。例如，累积一天做处理的叫做99批次；累积半天做处理的叫做13批次[13点]和23批次[23点]；还有每小时累积一次，那全天一共24个批次了。</p></li></ul><p>现在简单概述一下央行的这四个主要的清算系统。</p><h2 id="央行四大支付系统"><a href="#央行四大支付系统" class="headerlink" title="央行四大支付系统"></a>央行四大支付系统</h2><h3 id="大额实时支付系统"><a href="#大额实时支付系统" class="headerlink" title="大额实时支付系统"></a>大额实时支付系统</h3><p>大额是实时处理交易的；</p><p>金融机构都会在央行大额支付系统里开立清算账户，然后其他清算系统基本上会在清算的批次时调用央行大额支付将钱从各个金融机构的清算账户上划付。</p><blockquote><p>另外，不要被名称中的大额给误导了，因为大额支付系统的金额起点为0。也就是说，1毛钱的生意也可以使用大额。</p></blockquote><h3 id="小额批量支付系统"><a href="#小额批量支付系统" class="headerlink" title="小额批量支付系统"></a>小额批量支付系统</h3><p>小额是批量处理交易的；</p><p>主要是定位零售的，其实和美国的ACH [ <a href="https://baike.baidu.com/item/自动清算所系统/6889060?fr=aladdin" target="_blank" rel="noopener">Automated Clearing House</a>]类似，一些什么代发工资，代收水电煤气之类的缴费等等；</p><p>是有金额上限限制的。</p><h3 id="网上支付跨行清算系统"><a href="#网上支付跨行清算系统" class="headerlink" title="网上支付跨行清算系统"></a>网上支付跨行清算系统</h3><p>这个也叫做超级网银</p><p>银行网银就是使用的这个系统。</p><h3 id="境内外币支付系统"><a href="#境内外币支付系统" class="headerlink" title="境内外币支付系统"></a>境内外币支付系统</h3><p>这个满足国内对外币的需求，例如我们兑换美元，可以预约去中国银行兑换。</p><h2 id="清算系统"><a href="#清算系统" class="headerlink" title="清算系统"></a>清算系统</h2><h3 id="人民币跨境支付系统"><a href="#人民币跨境支付系统" class="headerlink" title="人民币跨境支付系统"></a>人民币跨境支付系统</h3><p>这个和境内外币支付系统恰恰相反，其用来国外满足人民币的清算。这个是人民币走出去的关键一步。</p><h3 id="城银清-amp-农信银"><a href="#城银清-amp-农信银" class="headerlink" title="城银清 &amp; 农信银"></a>城银清 &amp; 农信银</h3><p>这两个一个是为城市商业银行做清算的，一个是为农村合作信用社做清算的。</p><h3 id="银行卡跨行支付系统"><a href="#银行卡跨行支付系统" class="headerlink" title="银行卡跨行支付系统"></a>银行卡跨行支付系统</h3><p>这个是银行卡跨行支付的系统，即参与方是多家不同的金融机构，也称之为本代他</p><p>一般银行系统是不能直接处理其它银行的交易的，其中主要原因有两个方面，以A银行和B银行为例</p><ol><li><p>处理交易协议不同</p><p>A银行发行的卡其处理逻辑基本上大体上是按照标准来的，例如ISO8583；但是，还有一些自定义的地方或者各家支持的业务也有所不同，各个银行实现是不同的，所以会导致处理失败。</p></li><li><p>资金积压严重</p><p>及时第一点不是一个障碍，那么A银行发行的卡在B银行取款，那么为什么B银行要把钱给卡持有者呢？那么A就得在B银行开户，在B银行的账户上存钱，其钱叫做头寸。如果有10家机构或者100家机构或者更多呢？正如当时支付宝等支付机构在630‘断直连’之前都是一样的。所以会导致很多资金都在各个金融机构的账户里存着，白白浪费了资金的流动性。</p></li></ol><p>解决上述两个方面的问题，有什么方案呢？现在通用的方案是</p><ul><li><p>同一种通信协议或者规范</p><p>卡组织就是来做这个事情的，卡组织制定统一的规范，同时开发各种支付产品等等；这样大家就使用同一种通信规范，基本上可以跨越不同银行，做交易往来了。</p></li><li><p>在央行统一开立清算账户</p><p>这样央行开立一个清算账户，里面存上钱，供资金划付使用。如果金融机构在账户里存的钱不够，可以同行拆借等等；这样就不用在各个金融机构里开立账户。</p></li></ul><p>好了，银行卡跨行支付系统就是做这个事情的。</p><h3 id="网联清算系统"><a href="#网联清算系统" class="headerlink" title="网联清算系统"></a>网联清算系统</h3><p>这个清算系统有点特殊，因为它的出现，网上有很多马云与银联故事。其实网上支付现在不一定是全部通过它的，其实也可以通过银联等跨行支付系统的；后面再详细讲讲它的业务类型。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这里只是我根据央行发布的支付体系运行总体情况报告整理得来的信息，对一些系统或者周边系统还没有深入了解到。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>非金融机构支付服务管理办法</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no2-201006/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no2-201006/</id>
+    <published>2020-08-15T14:54:44.000Z</published>
+    <updated>2021-07-21T08:13:00.884Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>2010年6月份央行发布了 <a href="http://www.pbc.gov.cn/tiaofasi/144941/144957/2845832/index.html" target="_blank" rel="noopener"> 中国人民银行令〔2010〕第2号（非金融机构支付服务管理办法）</a>（以下简称2号令）开启了第三方支付的合法性，从此第三方支付群雄逐鹿，单支付牌照就一度炒到几亿</p></blockquote><a id="more"></a><p>2号令规定了，支付机构需要取得《支付业务许可证》才是合法的，已经从事支付业务的非金融机构在一年以内完成申请；所以从<strong>已获许可机构（支付机构）</strong>名单里看到的机构的开始生效时间基本都是2011年5月份，包括银联商务，支付宝，财付通等等。下面我们来看看其内容：</p><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>规范非金融机构支付服务行为，防范支付风险。</p><h2 id="非金融机构支付服务种类"><a href="#非金融机构支付服务种类" class="headerlink" title="非金融机构支付服务种类"></a>非金融机构支付服务种类</h2><ul><li><p>网络支付</p><p>互联网支付，移动电话支付，固话支付，数字电视支付等等，例如微信支付宝，电话购物等</p></li><li><p>预付卡的发行与受理</p><p>例如你去理发店，Tony老师总是推荐你办张卡。当然这个卡不是理发店能够发行的，而是需要有预付卡的发行与受理的支付公司给理发店定制的。</p></li><li><p>银行卡收单</p><p>POS终端等收单</p></li><li><p>其他支付服务</p></li></ul><h2 id="义务"><a href="#义务" class="headerlink" title="义务"></a>义务</h2><ul><li>依法接受央行的监督管理</li><li>履行发洗钱</li><li>不得损害国家利益、社会公共利益和客户合法权益</li></ul><h2 id="申请资质"><a href="#申请资质" class="headerlink" title="申请资质"></a>申请资质</h2><p>略</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;2010年6月份央行发布了 &lt;a href=&quot;http://www.pbc.gov.cn/tiaofasi/144941/144957/2845832/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; 中国人民银行令〔2010〕第2号（非金融机构支付服务管理办法）&lt;/a&gt;（以下简称2号令）开启了第三方支付的合法性，从此第三方支付群雄逐鹿，单支付牌照就一度炒到几亿&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中国人民银行关于加强支付受理终端及相关业务管理的通知（征求意见稿）</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/</id>
+    <published>2020-08-09T05:13:04.000Z</published>
+    <updated>2021-07-21T08:13:00.892Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><a href="http://www.pbc.gov.cn/tiaofasi/144941/144979/3941920/4035719/index.html" target="_blank" rel="noopener">《中国人民银行关于加强支付受理终端及相关业务管理的通知（征求意见稿）》</a> 是既 <a href="/Payment/法规/rules-pboc-no21/index.html">21号文 </a> 之后，又一部关于支付受理终端的法规。</p></blockquote><a id="more"></a><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="终端问题"><a href="#终端问题" class="headerlink" title="终端问题"></a>终端问题</h3><p>现象</p><ul><li>买卖终端</li><li>移机</li><li>一机多码</li><li>一机多户</li><li>…..</li></ul><p>严重性</p><ul><li>为违法犯罪分子进行资金转移带来便利</li></ul><h3 id="特约商户问题"><a href="#特约商户问题" class="headerlink" title="特约商户问题"></a>特约商户问题</h3><p>现象</p><ul><li>准入不严格</li><li>核实流于形式</li></ul><p>严重性</p><ul><li>虚假商户问题任然突出</li></ul><h3 id="条码支付问题"><a href="#条码支付问题" class="headerlink" title="条码支付问题"></a>条码支付问题</h3><p>现象</p><ul><li>没有健全条码支付终端、收单条码管理机制</li></ul><p>严重性</p><ul><li>导致条码支付业务涉黑灰产的风险加大</li></ul><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>规范收单等业务管理</li><li>打击跨境赌博、电信诈骗等违法犯罪活动</li><li>切断黑灰产业资金链</li><li>保障社会公众利益</li></ul><h2 id="整治方向"><a href="#整治方向" class="headerlink" title="整治方向"></a>整治方向</h2><h3 id="支付受理终端管理"><a href="#支付受理终端管理" class="headerlink" title="支付受理终端管理"></a>支付受理终端管理</h3><ul><li><p>银行卡受理终端</p><p><img src="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/Terminal_202006_Card.png" alt></p><blockquote><p>F -  终端生产厂商  - 深蓝青色<br>A - 收单机构 - 橘色<br>C -  清算机构 - 蓝色<br>五要素： 收单机构代码、特约商户编码、特约商户统一社会信用代码（小微商户为负责人身份证件号码）、特约商户收单结算账户、银行卡受理终端布放地址</p></blockquote></li><li><p>条码支付受理终端</p><ul><li><p>受理终端</p><p>终端序列号与五要素</p></li><li><p>辅助受理终端</p><p>四要素</p></li><li><p>收款条码</p><p>区分个人和特约商户</p></li></ul><blockquote><p>四要素： 收单机构代码、特约商户统一社会信用代码、特约商户收单结算账户和特约商户经营地址</p></blockquote></li><li><p>创新支付受理终端</p><p>至少提前30日向中国人民银行及其分支机构报告</p></li></ul><h3 id="特约商户管理"><a href="#特约商户管理" class="headerlink" title="特约商户管理"></a>特约商户管理</h3><ul><li>特约商户实名制</li><li>明确商户信息核验方式<ul><li>面对面</li><li>同步视频</li></ul></li><li>特约商户巡检要求</li></ul><h3 id="收单业务监测"><a href="#收单业务监测" class="headerlink" title="收单业务监测"></a>收单业务监测</h3><ul><li>交易信息的真实性和完整性</li><li>终端位置监测</li><li>特约商户资金结算监测</li><li>专项监测与信息核对<ul><li>边境地区</li><li>核对交易信息和五要素不一致的</li></ul></li></ul><h3 id="监督管理等相关内容"><a href="#监督管理等相关内容" class="headerlink" title="监督管理等相关内容"></a>监督管理等相关内容</h3><ul><li>相关市场主体报送落实情况和工作计划</li><li>明确对银行、支付机构、清算机构的违反行为相关罚则</li></ul><h2 id="解读"><a href="#解读" class="headerlink" title="解读"></a>解读</h2><p>该条法主要是解决：打击跨境赌博、电信诈骗等违法犯罪活动，切断黑灰产业资金链；相关的跨境赌博新闻可以参考：<a href="http://www.cyberpolice.cn/wfjb/html/zcjd/20200701/4739.shtml" target="_blank" rel="noopener">http://www.cyberpolice.cn/wfjb/html/zcjd/20200701/4739.shtml</a></p><p>现如今的条码支付或者叫二维码大家更熟知，大家的微信或者支付宝的二维码是有付款功能的，所以很多跑分平台（码商）利用大量个人收款条码来化整为零，从而给监管带来很大的难度。大概的操作流程请看下图；其资金的流向从原来原来的客户到支付机构的流向，转化为客户向客户C2C的流向了；</p><p><img src="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/%E8%B7%91%E5%88%86.png" alt="跑分平台与赌博平台"></p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.pbc.gov.cn/tiaofasi/144941/144979/3941920/4035719/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《中国人民银行关于加强支付受理终端及相关业务管理的通知（征求意见稿）》&lt;/a&gt; 是既 &lt;a href=&quot;/Payment/法规/rules-pboc-no21/index.html&quot;&gt;21号文 &lt;/a&gt; 之后，又一部关于支付受理终端的法规。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+    <category term="终端" scheme="https://lianyouli.gitee.io/tags/%E7%BB%88%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>21号文</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no21/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no21/</id>
+    <published>2020-08-02T02:16:22.000Z</published>
+    <updated>2021-07-21T08:13:00.886Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>缩写或简称泛滥的地方，非金融莫属了。21号文的全称是：中国人民银行关于强化银行卡受理终端安全管理的通知（银发〔2017〕21号）；看完觉得还是21号文更好交流。该规范规范了银行卡受理终端。</p></blockquote><a id="more"></a><h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><p><a href="http://www.pbc.gov.cn/tiaofasi/144941/3581332/3589575/index.html" target="_blank" rel="noopener">21号文</a></p><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><ul><li>加强终端安全管理</li><li>提升支付风险防控管理</li><li>防范电信网络诈骗以及伪卡欺诈</li><li>切实保护人民群众的财产安全和合法权益</li></ul><h3 id="措施"><a href="#措施" class="headerlink" title="措施"></a>措施</h3><h4 id="交易报文"><a href="#交易报文" class="headerlink" title="交易报文"></a>交易报文</h4><p>交易报文在下面的场景中需要包含必需的内容</p><table><thead><tr><th></th><th>ATM</th><th>POS</th></tr></thead><tbody><tr><td>本代本</td><td>- 终端代码</td><td>- 受理机构编码<br>- 商户编码<br>- 终端编码<br>- 终端序列号<br>- 终端应用版本编号</td></tr><tr><td>本代他</td><td>- 受理机构编码<br>- 终端编码</td><td>同上</td></tr></tbody></table><h4 id="受理终端注册管理"><a href="#受理终端注册管理" class="headerlink" title="受理终端注册管理"></a>受理终端注册管理</h4><h5 id="管理平台"><a href="#管理平台" class="headerlink" title="管理平台"></a>管理平台</h5><p>清算机构搭建受理终端注册管理平台，商业银行或者支付机构在其管理平台上注册终端信息。</p><h5 id="注册数据规范"><a href="#注册数据规范" class="headerlink" title="注册数据规范"></a>注册数据规范</h5><p>同步文件即商业银行或者支付机构在管理平台上的提交的终端信息文件，反馈文件即管理平台反馈给注册方的信息文件，主要包括了概要统计信息，例如总条数，成功条数，拒绝条数；如果有拒绝记录，则包括了拒绝记录的原始记录及其拒绝原因。</p><p>POS终端是需要商户信息的，因为POS是商户收单的机具。</p><table><thead><tr><th>ATM</th><th>POS</th></tr></thead><tbody><tr><td>ATM终端注册同步文件<br>ATM终端注册反馈文件</td><td>POS终端注册同步文件<br>POS终端注册反馈文件</td></tr><tr><td></td><td>商户注册同步文件<br>商户注册反馈文件</td></tr></tbody></table><h5 id="时间要求"><a href="#时间要求" class="headerlink" title="时间要求"></a>时间要求</h5><ul><li>新入网ATM终端至少于布放或变更前一个工作日完成终端信息注册</li><li>新入网POS终端至少于布放或变更后两个工作日完成终端信息注册</li></ul><h4 id="终端产品质量管理"><a href="#终端产品质量管理" class="headerlink" title="终端产品质量管理"></a>终端产品质量管理</h4><p>终端产品需要符合国家标准和金融行业标准</p><h4 id="受理终端支付风险防控"><a href="#受理终端支付风险防控" class="headerlink" title="受理终端支付风险防控"></a>受理终端支付风险防控</h4><ul><li>信息校验</li><li>风险监控</li><li>联动防控</li><li>密钥管理</li></ul><h2 id="解读"><a href="#解读" class="headerlink" title="解读"></a>解读</h2><p>该条法更多在于解决： 防范电信网络诈骗以及伪卡欺诈 ，因为近10年电信诈骗特别猖狂且疯狂增长，可以参考 <a href="https://www.sohu.com/a/114330177_454426/" target="_blank" rel="noopener">https://www.sohu.com/a/114330177_454426/</a> ；伪卡欺诈，可以参考：<a href="https://www.sohu.com/a/146377196_120702" target="_blank" rel="noopener">https://www.sohu.com/a/146377196_120702</a></p><p>同时参考银联最近的数据，伪卡欺诈依旧是主要的欺诈，不过非面对面欺诈呈逐年递增势头。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;缩写或简称泛滥的地方，非金融莫属了。21号文的全称是：中国人民银行关于强化银行卡受理终端安全管理的通知（银发〔2017〕21号）；看完觉得还是21号文更好交流。该规范规范了银行卡受理终端。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+    <category term="终端" scheme="https://lianyouli.gitee.io/tags/%E7%BB%88%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>银行卡清算机构管理办法</title>
+    <link href="https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-clearing/"/>
+    <id>https://lianyouli.gitee.io/Payment/%E6%B3%95%E8%A7%84/rules-pboc-clearing/</id>
+    <published>2020-07-26T02:49:38.000Z</published>
+    <updated>2021-07-21T08:13:00.881Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>法律法规枯燥之中又妙趣横生；因为它定义了规则。</p><p>《银行卡清算机构管理办法》对很多人支付行业的从业人员都无关紧要，因为它是清算机构而且基本是高层需要关心的。对于像鄙人这样的一个小螺丝钉，读一下此法规，虽然理解不是很透切，只能说对公司的启动以及运营等有个粗略的了解。</p></blockquote><a id="more"></a><p><a href="http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/3077866/index.html" target="_blank" rel="noopener">银行卡清算机构管理办法</a></p><p><img src="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-clearing/rules_pboc_clearing_mindmap.svg" alt="脑图"></p><p>所以最慢成功的批准开业周期是1年7个月（30d + 90d + 1y + 90d），那最完美的最快速的批准开业周期就很难说了，一年算是好的了，因为一个清算交易系统以及相关的核心系统在一年内搞定可能也算是丰功伟绩了，更不用说搞定各种监管要求。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;法律法规枯燥之中又妙趣横生；因为它定义了规则。&lt;/p&gt;
+&lt;p&gt;《银行卡清算机构管理办法》对很多人支付行业的从业人员都无关紧要，因为它是清算机构而且基本是高层需要关心的。对于像鄙人这样的一个小螺丝钉，读一下此法规，虽然理解不是很透切，只能说对公司的启动以及运营等有个粗略的了解。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/categories/Payment/"/>
+    
+    <category term="法规" scheme="https://lianyouli.gitee.io/categories/Payment/%E6%B3%95%E8%A7%84/"/>
+    
+    
+    <category term="Payment" scheme="https://lianyouli.gitee.io/tags/Payment/"/>
+    
+    <category term="中国人民银行法规" scheme="https://lianyouli.gitee.io/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E6%B3%95%E8%A7%84/"/>
+    
+  </entry>
+  
+</feed>

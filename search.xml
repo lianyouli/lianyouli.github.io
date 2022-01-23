@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>rules-pboc-no259</title>
+      <link href="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no259/"/>
+      <url>/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no259/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><a href="http://www.pbc.gov.cn/tiaofasi/144941/3581332/4359567/index.html" target="_blank" rel="noopener">259号文</a>是既21号之后针对终端再次补充，更加严格了，当然此次也针对了条码支付终端相关的要求。足以看出终端的重要性，也侧面反映了现在洗钱、涉黑涉黄等非法行为泛滥。</p><p>259号文是提纲挈领的法规，那么中国支付清算协会关于印发<a href="http://www.pcac.org.cn/eportal/ui?pageId=598041&articleKey=614091&columnId=595027" target="_blank" rel="noopener">《特约商户巡检指引》</a>的通知就针对特约商户明确了巡检的方式、周期、内容和频率等内容。</p></blockquote><a id="more"></a><h1 id="259号文"><a href="#259号文" class="headerlink" title="259号文"></a>259号文</h1><p>支付受理终端业务管理其大多数内容还是延续21号文，其总结起来就是<strong>1：1：1</strong>，即：</p><blockquote><p>一台银行卡受理终端对应一个终端序列号，对应一个特约商户</p></blockquote><p>条码支付受理终端及相关业务要求了 条码的场景和用途。</p><p>例如个人静态收款条码不可以远程非面对面收款，这个也有效扼制了现在微信支付宝之类的跑分等洗钱行为。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+          <category> 法规 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+            <tag> 中国人民银行法规 </tag>
+            
+            <tag> 终端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>it_issue_jupyter_nignix_400</title>
+      <link href="/IT/Issues/it-issue-jupyter-nignix-400/"/>
+      <url>/IT/Issues/it-issue-jupyter-nignix-400/</url>
+      
+        <content type="html"><![CDATA[<h1 id="jupyter-kernel一直连接不上服务器"><a href="#jupyter-kernel一直连接不上服务器" class="headerlink" title="jupyter kernel一直连接不上服务器"></a>jupyter kernel一直连接不上服务器</h1><p>Docker上拉取了hortonworks/sandbox-hdp 和 hortonworks/sandbox-proxy, 在sandbox-hdp上安装了jupyter来写一些pyspark的代码。</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>其中sandbox-proxy做了如下配置</p><h3 id="HDP3-sandbox-proxy-conf-d-http-hdp-conf"><a href="#HDP3-sandbox-proxy-conf-d-http-hdp-conf" class="headerlink" title="HDP3/sandbox/proxy/conf.d/http-hdp.conf"></a>HDP3/sandbox/proxy/conf.d/http-hdp.conf</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># jupyter notebook </span><br><span class="line">server &#123;</span><br><span class="line">  listen 9999;</span><br><span class="line">  server_name sandbox-hdp.hortonworks.com;</span><br><span class="line">  location / &#123;</span><br><span class="line">                proxy_pass http://sandbox-hdp:9999;</span><br><span class="line">                proxy_set_header      Host $host;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="HDP3-sandbox-proxy-proxy-deploy-sh"><a href="#HDP3-sandbox-proxy-proxy-deploy-sh" class="headerlink" title="HDP3/sandbox/proxy/proxy-deploy.sh"></a>HDP3/sandbox/proxy/proxy-deploy.sh</h3><p>新增一行-p 9999:9999 \</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">!/usr/bin/env bash</span><br><span class="line">docker rm -f sandbox-proxy 2&gt;/dev/null</span><br><span class="line">docker run --name sandbox-proxy --network=cda \</span><br><span class="line">-v /Users/arthur/Software/Docker/HDP3/assets/nginx.conf:/etc/nginx/nginx.conf \</span><br><span class="line">-v /Users/arthur/Software/Docker/HDP3/sandbox/proxy/conf.d:/etc/nginx/conf.d \</span><br><span class="line">-v /Users/arthur/Software/Docker/HDP3/sandbox/proxy/conf.stream.d:/etc/nginx/conf.stream.d \</span><br><span class="line">-p 1080:1080 \</span><br><span class="line">-p 9999:9999 \</span><br><span class="line">...</span><br></pre></td></tr></table></figure><h2 id="浏览器访问，jupyter后台错误日志"><a href="#浏览器访问，jupyter后台错误日志" class="headerlink" title="浏览器访问，jupyter后台错误日志"></a>浏览器访问，jupyter后台错误日志</h2><p>NotebookApp] 400 GET /api/kernels/</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">sh-4.2<span class="comment"># jupyter-notebook --allow-root</span></span><br><span class="line">[W 23:05:07.281 NotebookApp] Config option `use_redirect_file` not recognized by `NotebookApp`.</span><br><span class="line">[I 23:05:07.462 NotebookApp] Serving notebooks from <span class="built_in">local</span> directory: /root/notebook</span><br><span class="line">[I 23:05:07.462 NotebookApp] The Jupyter Notebook is running at:</span><br><span class="line">[I 23:05:07.462 NotebookApp] http://sandbox-hdp.hortonworks.com:9999/?token=9c46a4fbfa4a432be0275f2381cd24543ba763566c0cc8fe</span><br><span class="line">[I 23:05:07.462 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</span><br><span class="line">[W 23:05:07.466 NotebookApp] No web browser found: could not locate runnable browser.</span><br><span class="line">[C 23:05:07.467 NotebookApp] </span><br><span class="line">    </span><br><span class="line">    To access the notebook, open this file <span class="keyword">in</span> a browser:</span><br><span class="line">        file:///root/.<span class="built_in">local</span>/share/jupyter/runtime/nbserver-38953-open.html</span><br><span class="line">    Or copy and paste one of these URLs:</span><br><span class="line">        http://sandbox-hdp.hortonworks.com:9999/?token=9c46a4fbfa4a432be0275f2381cd24543ba763566c0cc8fe</span><br><span class="line">[E 23:05:14.835 NotebookApp] Could not open static file <span class="string">''</span></span><br><span class="line">[W 23:05:15.184 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.18.0.2) 14.91ms referer=http://sandbox-hdp.hortonworks.com:9999/notebooks/Untitled1.ipynb?kernel_name=python2</span><br><span class="line">[I 23:05:15.786 NotebookApp] Kernel started: eae1b42e-120e-4d69-9266-c06432677d5a</span><br><span class="line">[I 23:05:16.372 NotebookApp] Adapting to protocol v5.1 <span class="keyword">for</span> kernel eae1b42e-120e-4d69-9266-c06432677d5a</span><br><span class="line">[W 23:05:16.375 NotebookApp] 400 GET /api/kernels/eae1b42e-120e-4d69-9266-c06432677d5a/channels?session_id=0fea190ca5e94abd89500020f29a66fb (172.18.0.2) 521.39ms referer=None</span><br><span class="line">[W 23:05:17.437 NotebookApp] Replacing stale connection: eae1b42e-120e-4d69-9266-c06432677d5a:0fea190ca5e94abd89500020f29a66fb</span><br><span class="line">[W 23:05:18.140 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.18.0.2) 6.56ms referer=http://sandbox-hdp.hortonworks.com:9999/tree?token=9c46a4fbfa4a432be0275f2381cd24543ba763566c0cc8fe</span><br><span class="line">[W 23:05:20.220 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.18.0.2) 4.17ms referer=http://sandbox-hdp.hortonworks.com:9999/notebooks/Untitled1.ipynb</span><br><span class="line">[I 23:05:20.443 NotebookApp] Adapting to protocol v5.1 <span class="keyword">for</span> kernel eae1b42e-120e-4d69-9266-c06432677d5a</span><br><span class="line">[W 23:05:20.444 NotebookApp] 400 GET /api/kernels/eae1b42e-120e-4d69-9266-c06432677d5a/channels?session_id=ed975e0dfee44503a3a2405dac3718cc (172.18.0.2) 3.54ms referer=None</span><br><span class="line">[W 23:05:21.516 NotebookApp] Replacing stale connection: eae1b42e-120e-4d69-9266-c06432677d5a:ed975e0dfee44503a3a2405dac3718cc</span><br><span class="line">[W 23:06:23.550 NotebookApp] Replacing stale connection: eae1b42e-120e-4d69-9266-c06432677d5a:ed975e0dfee44503a3a2405dac3718cc</span><br></pre></td></tr></table></figure><h2 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h2><p><a href="https://www.cnblogs.com/ycc1/p/14229534.html" target="_blank" rel="noopener">Virya的博客</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># jupyter notebook</span></span><br><span class="line">server &#123;</span><br><span class="line">  listen 9999;</span><br><span class="line">  server_name sandbox-hdp.hortonworks.com;</span><br><span class="line">  location / &#123;</span><br><span class="line">                proxy_pass http://sandbox-hdp:9999;</span><br><span class="line">                proxy_set_header      Host <span class="variable">$host</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  location ~ /api/kernels/ &#123;</span><br><span class="line">                proxy_pass            http://sandbox-hdp:9999;</span><br><span class="line">                proxy_set_header      Host <span class="variable">$host</span>;</span><br><span class="line"></span><br><span class="line">                proxy_http_version    1.1;  <span class="comment"># websocket support</span></span><br><span class="line">                proxy_set_header      Upgrade <span class="string">"websocket"</span>;</span><br><span class="line">                proxy_set_header      Connection <span class="string">"Upgrade"</span>;</span><br><span class="line">                proxy_read_timeout    86400;</span><br><span class="line">        &#125;</span><br><span class="line">  location ~ /terminals/ &#123;</span><br><span class="line">                proxy_pass            http://sandbox-hdp:9999;</span><br><span class="line">                proxy_set_header      Host <span class="variable">$host</span>;</span><br><span class="line"></span><br><span class="line">                proxy_http_version    1.1;  <span class="comment"># websocket support</span></span><br><span class="line">                proxy_set_header      Upgrade <span class="string">"websocket"</span>;</span><br><span class="line">                proxy_set_header      Connection <span class="string">"Upgrade"</span>;</span><br><span class="line">                proxy_read_timeout    86400;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+          <category> Issues </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jupyter </tag>
+            
+            <tag> nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>TLS 模式</title>
+      <link href="/uncategorized/tls-mode/"/>
+      <url>/uncategorized/tls-mode/</url>
+      
+        <content type="html"><![CDATA[<h1 id="TLS模式"><a href="#TLS模式" class="headerlink" title="TLS模式"></a>TLS模式</h1><p>有三种模式，见下图</p><ol><li><p>客户端直接忽略TLS证书访问服务</p><p>例如使用curl -k -tlsv1 等参数可以忽略证书验证直接访问。即客户端不检查证书的有效性和合法性。即此时，客户端不检查服务端的网址合法性和有效性，同时网络传输也是明文。</p></li><li><p>客户端使用TLS证书访问服务</p><p>此场景是最常见的，即客户端需要检查服务端证书的合法性和有效性，传输也是加密的。</p></li><li><p>双向认证</p><p>此时除了服务端证书需要提供给客户端，同时客户端的证书需要添加到服务端。登录时，可以直接使用证书验证直接登录。另外，例如U盾等也是双向认证的应用</p></li></ol><p><img src="/uncategorized/tls-mode/tls.jpg" alt="tls"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> IT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>云闪付</title>
+      <link href="/Payment/payment-yunshanfu/"/>
+      <url>/Payment/payment-yunshanfu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="云闪付"><a href="#云闪付" class="headerlink" title="云闪付"></a>云闪付</h1><p>没错，就是你想的那个云闪付。千人千面，今天我要从卡组织的角度来看。</p><p>银联大力推广，所以云闪付涉及方方面面。</p><a id="more"></a><h2 id="付的世界"><a href="#付的世界" class="headerlink" title="付的世界"></a>付的世界</h2><h3 id="便民服务"><a href="#便民服务" class="headerlink" title="便民服务"></a>便民服务</h3><p>乘车码、公共缴费、健康码、手机充值等</p><p>国庆期间，我去杭州西湖玩，地铁入口看到提示，可以使用云闪付和支付宝乘坐地铁；本着云闪付也是我支付软件后宫佳丽之一，今天就翻她牌了；众所周知，杭州基本上是支付宝的天下，到深圳是微信的天下，坐过城市交通的深深的体会到地方城市的溺爱。关键她以国家队的形式打破了地方城市的保护；关键操作非常简单而且还打9折优惠，爱了爱了。</p><h3 id="财富管理"><a href="#财富管理" class="headerlink" title="财富管理"></a>财富管理</h3><p>信用卡还款、转账、借款、申请信用卡等</p><p>信用卡还款免手续费！支付宝或者微信还信用卡从免费到收费，广大<strong>打工人</strong>表示马爸爸你变了。</p><h3 id="政务民生"><a href="#政务民生" class="headerlink" title="政务民生"></a>政务民生</h3><p>我的社保、我的医保、税款缴纳、交通罚款等</p><p>税款缴纳竟然可以使用信用卡！这个出乎意料。</p><h3 id="购物娱乐"><a href="#购物娱乐" class="headerlink" title="购物娱乐"></a>购物娱乐</h3><p>商城、数字景区等</p><p>数字景区买门票有优惠的。</p><h3 id="境外服务"><a href="#境外服务" class="headerlink" title="境外服务"></a>境外服务</h3><p>境外海淘、境外退税、权益U赏等</p><p>这个大类里的服务点击时有Error，测试人员的鸡腿没有了吧。</p><h3 id="第三方服务"><a href="#第三方服务" class="headerlink" title="第三方服务"></a>第三方服务</h3><p>租房、猫眼电影、淘车位等</p><h2 id="角色扮演"><a href="#角色扮演" class="headerlink" title="角色扮演"></a>角色扮演</h2><p>云闪付出自银联，银联做为卡组织；单纯从卡组织的角色来看，其云闪付的定位是非常契合的。</p><p>因为卡组织有服务、协调，自律以及监督等功能；这里就只从服务角度来看，就需要集发卡、收单、商户和持卡人于一体，满足各方一部分需求，平衡各方的利益点，以共荣为目的，在一个平台上提供服务。</p><p>所以从战略方向来看，前途一片光明。可是，云闪付却干了收单的事，这个平台就不再是拧成一股绳,搏尽一份力,狠下一条心,共圆一个梦的那个平台了。</p><h2 id="世事造化"><a href="#世事造化" class="headerlink" title="世事造化"></a>世事造化</h2><p>现在支付行业环境再也不是从前了。</p><h4 id="拉新"><a href="#拉新" class="headerlink" title="拉新"></a>拉新</h4><p>以前获取一个新用户的成本非常低的；但是现在获取一个新用户的成本比较高了，你看支付宝为了获取一个为了获取新用户，给老用户的推荐奖是20元的电话费。而且从现在的互联网用户总量来看，市场差不多快饱和了。</p><h4 id="用户量为王"><a href="#用户量为王" class="headerlink" title="用户量为王"></a>用户量为王</h4><p>谁的用户量大，谁就了不得，谁就话语权就大，得用户者得天下；甚至连监管都要考虑三分，有种三国时代的携天子而以令诸侯。</p><h4 id="互联网时代"><a href="#互联网时代" class="headerlink" title="互联网时代"></a>互联网时代</h4><p>而且现在互联网的世界是不再是4321，即龙头老大老二的市场份额占比基本上是70%左右，其它的基本上还能吃饱饭。而现在第三方支付的市场份额的90%多被龙头老大老二占了，所以除了微信支付宝，剩余的就只能叫做其它了；关键是老大老二利用行业领头优势，全面围杀竞争者的反击；最后，互联网的时代是一个变化万千的时代，是一个瞬息万变的时代，是一个与监管相爱相杀的时代；很多时候，行业龙头老大老二为了抢占市场，面子上对监管服服帖帖的，背后依旧干些偷偷摸摸的事，因为惩罚的成本与其利润相比显得微不足道。</p><h4 id="卡基过渡到帐基"><a href="#卡基过渡到帐基" class="headerlink" title="卡基过渡到帐基"></a>卡基过渡到帐基</h4><p>以前基本上是卡基支付，而现在是帐户支付的时代；卡基变成了帐基的基石，上层应用更多围绕着帐户来构建丰富的生态和应用场景。</p><p>所以内因加外因，这也是为什么银联投资和市场占比来看有点不成正比的主要原因。</p><h2 id="异军突起"><a href="#异军突起" class="headerlink" title="异军突起"></a>异军突起</h2><p>国家队的云闪付这几年的大力推广，效果虽然不是那么显著，但是起色还是不错的。如果要突破，本人的愚见还是回归支付本质和卡组织的本质。深耕支付场景，广惠各个实体，互助共荣不称霸。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>国家发展改革委 中国人民银行关于完善银行卡刷卡手续费定价机制的通知</title>
+      <link href="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-96fees/"/>
+      <url>/Payment/%E6%B3%95%E8%A7%84/rules-pboc-96fees/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p> <a href="http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/3034338/index.html" target="_blank" rel="noopener">国家发展改革委 中国人民银行 关于完善银行卡刷卡手续费定价机制的通知</a> 俗称96费改，是因为从2016年9月6日起实施的。有此宝典，如同如来佛祖的手掌，各种费率都逃不出手掌心。</p></blockquote><a id="more"></a>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+          <category> 法规 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+            <tag> 中国人民银行法规 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>清算架构</title>
+      <link href="/Payment/payment-clearing-architecture/"/>
+      <url>/Payment/payment-clearing-architecture/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>这里只是我根据央行发布的支付体系运行总体情况报告整理得来的信息，对一些系统或者周边系统还没有深入了解到。</p></blockquote><a id="more"></a><p><img src="/Payment/payment-clearing-architecture/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F.png" alt="支付系统信息"></p><blockquote><p>CIPS 是人民币国际化的重要部分</p><p>其他清算系统也有美国运通一个位置了，因为美国运通也拿到清算牌照，正式营业了。</p></blockquote><p><img src="/Payment/payment-clearing-architecture/%E6%B8%85%E7%AE%97%E6%9C%BA%E6%9E%84%E6%9E%B6%E6%9E%84.png" alt="&#39;架构&#39;"></p><p>这里这么多清算机构，是不是都懵圈了？ 在开始之前，先铺垫一点基础术语：</p><ul><li><p>实时</p><p>每一笔交易都实时处理，即来一笔交易就处理一笔。</p></li><li><p>批量</p><p>交易累积一段时间做处理。例如，累积一天做处理的叫做99批次；累积半天做处理的叫做13批次[13点]和23批次[23点]；还有每小时累积一次，那全天一共24个批次了。</p></li></ul><p>现在简单概述一下央行的这四个主要的清算系统。</p><h2 id="央行四大支付系统"><a href="#央行四大支付系统" class="headerlink" title="央行四大支付系统"></a>央行四大支付系统</h2><h3 id="大额实时支付系统"><a href="#大额实时支付系统" class="headerlink" title="大额实时支付系统"></a>大额实时支付系统</h3><p>大额是实时处理交易的；</p><p>金融机构都会在央行大额支付系统里开立清算账户，然后其他清算系统基本上会在清算的批次时调用央行大额支付将钱从各个金融机构的清算账户上划付。</p><blockquote><p>另外，不要被名称中的大额给误导了，因为大额支付系统的金额起点为0。也就是说，1毛钱的生意也可以使用大额。</p></blockquote><h3 id="小额批量支付系统"><a href="#小额批量支付系统" class="headerlink" title="小额批量支付系统"></a>小额批量支付系统</h3><p>小额是批量处理交易的；</p><p>主要是定位零售的，其实和美国的ACH [ <a href="https://baike.baidu.com/item/自动清算所系统/6889060?fr=aladdin" target="_blank" rel="noopener">Automated Clearing House</a>]类似，一些什么代发工资，代收水电煤气之类的缴费等等；</p><p>是有金额上限限制的。</p><h3 id="网上支付跨行清算系统"><a href="#网上支付跨行清算系统" class="headerlink" title="网上支付跨行清算系统"></a>网上支付跨行清算系统</h3><p>这个也叫做超级网银</p><p>银行网银就是使用的这个系统。</p><h3 id="境内外币支付系统"><a href="#境内外币支付系统" class="headerlink" title="境内外币支付系统"></a>境内外币支付系统</h3><p>这个满足国内对外币的需求，例如我们兑换美元，可以预约去中国银行兑换。</p><h2 id="清算系统"><a href="#清算系统" class="headerlink" title="清算系统"></a>清算系统</h2><h3 id="人民币跨境支付系统"><a href="#人民币跨境支付系统" class="headerlink" title="人民币跨境支付系统"></a>人民币跨境支付系统</h3><p>这个和境内外币支付系统恰恰相反，其用来国外满足人民币的清算。这个是人民币走出去的关键一步。</p><h3 id="城银清-amp-农信银"><a href="#城银清-amp-农信银" class="headerlink" title="城银清 &amp; 农信银"></a>城银清 &amp; 农信银</h3><p>这两个一个是为城市商业银行做清算的，一个是为农村合作信用社做清算的。</p><h3 id="银行卡跨行支付系统"><a href="#银行卡跨行支付系统" class="headerlink" title="银行卡跨行支付系统"></a>银行卡跨行支付系统</h3><p>这个是银行卡跨行支付的系统，即参与方是多家不同的金融机构，也称之为本代他</p><p>一般银行系统是不能直接处理其它银行的交易的，其中主要原因有两个方面，以A银行和B银行为例</p><ol><li><p>处理交易协议不同</p><p>A银行发行的卡其处理逻辑基本上大体上是按照标准来的，例如ISO8583；但是，还有一些自定义的地方或者各家支持的业务也有所不同，各个银行实现是不同的，所以会导致处理失败。</p></li><li><p>资金积压严重</p><p>及时第一点不是一个障碍，那么A银行发行的卡在B银行取款，那么为什么B银行要把钱给卡持有者呢？那么A就得在B银行开户，在B银行的账户上存钱，其钱叫做头寸。如果有10家机构或者100家机构或者更多呢？正如当时支付宝等支付机构在630‘断直连’之前都是一样的。所以会导致很多资金都在各个金融机构的账户里存着，白白浪费了资金的流动性。</p></li></ol><p>解决上述两个方面的问题，有什么方案呢？现在通用的方案是</p><ul><li><p>同一种通信协议或者规范</p><p>卡组织就是来做这个事情的，卡组织制定统一的规范，同时开发各种支付产品等等；这样大家就使用同一种通信规范，基本上可以跨越不同银行，做交易往来了。</p></li><li><p>在央行统一开立清算账户</p><p>这样央行开立一个清算账户，里面存上钱，供资金划付使用。如果金融机构在账户里存的钱不够，可以同行拆借等等；这样就不用在各个金融机构里开立账户。</p></li></ul><p>好了，银行卡跨行支付系统就是做这个事情的。</p><h3 id="网联清算系统"><a href="#网联清算系统" class="headerlink" title="网联清算系统"></a>网联清算系统</h3><p>这个清算系统有点特殊，因为它的出现，网上有很多马云与银联故事。其实网上支付现在不一定是全部通过它的，其实也可以通过银联等跨行支付系统的；后面再详细讲讲它的业务类型。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>非金融机构支付服务管理办法</title>
+      <link href="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no2-201006/"/>
+      <url>/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no2-201006/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>2010年6月份央行发布了 <a href="http://www.pbc.gov.cn/tiaofasi/144941/144957/2845832/index.html" target="_blank" rel="noopener"> 中国人民银行令〔2010〕第2号（非金融机构支付服务管理办法）</a>（以下简称2号令）开启了第三方支付的合法性，从此第三方支付群雄逐鹿，单支付牌照就一度炒到几亿</p></blockquote><a id="more"></a><p>2号令规定了，支付机构需要取得《支付业务许可证》才是合法的，已经从事支付业务的非金融机构在一年以内完成申请；所以从<strong>已获许可机构（支付机构）</strong>名单里看到的机构的开始生效时间基本都是2011年5月份，包括银联商务，支付宝，财付通等等。下面我们来看看其内容：</p><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>规范非金融机构支付服务行为，防范支付风险。</p><h2 id="非金融机构支付服务种类"><a href="#非金融机构支付服务种类" class="headerlink" title="非金融机构支付服务种类"></a>非金融机构支付服务种类</h2><ul><li><p>网络支付</p><p>互联网支付，移动电话支付，固话支付，数字电视支付等等，例如微信支付宝，电话购物等</p></li><li><p>预付卡的发行与受理</p><p>例如你去理发店，Tony老师总是推荐你办张卡。当然这个卡不是理发店能够发行的，而是需要有预付卡的发行与受理的支付公司给理发店定制的。</p></li><li><p>银行卡收单</p><p>POS终端等收单</p></li><li><p>其他支付服务</p></li></ul><h2 id="义务"><a href="#义务" class="headerlink" title="义务"></a>义务</h2><ul><li>依法接受央行的监督管理</li><li>履行发洗钱</li><li>不得损害国家利益、社会公共利益和客户合法权益</li></ul><h2 id="申请资质"><a href="#申请资质" class="headerlink" title="申请资质"></a>申请资质</h2><p>略</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+          <category> 法规 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+            <tag> 中国人民银行法规 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>中国人民银行关于加强支付受理终端及相关业务管理的通知（征求意见稿）</title>
+      <link href="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/"/>
+      <url>/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><a href="http://www.pbc.gov.cn/tiaofasi/144941/144979/3941920/4035719/index.html" target="_blank" rel="noopener">《中国人民银行关于加强支付受理终端及相关业务管理的通知（征求意见稿）》</a> 是既 <a href="/Payment/法规/rules-pboc-no21/index.html">21号文 </a> 之后，又一部关于支付受理终端的法规。</p></blockquote><a id="more"></a><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="终端问题"><a href="#终端问题" class="headerlink" title="终端问题"></a>终端问题</h3><p>现象</p><ul><li>买卖终端</li><li>移机</li><li>一机多码</li><li>一机多户</li><li>…..</li></ul><p>严重性</p><ul><li>为违法犯罪分子进行资金转移带来便利</li></ul><h3 id="特约商户问题"><a href="#特约商户问题" class="headerlink" title="特约商户问题"></a>特约商户问题</h3><p>现象</p><ul><li>准入不严格</li><li>核实流于形式</li></ul><p>严重性</p><ul><li>虚假商户问题任然突出</li></ul><h3 id="条码支付问题"><a href="#条码支付问题" class="headerlink" title="条码支付问题"></a>条码支付问题</h3><p>现象</p><ul><li>没有健全条码支付终端、收单条码管理机制</li></ul><p>严重性</p><ul><li>导致条码支付业务涉黑灰产的风险加大</li></ul><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>规范收单等业务管理</li><li>打击跨境赌博、电信诈骗等违法犯罪活动</li><li>切断黑灰产业资金链</li><li>保障社会公众利益</li></ul><h2 id="整治方向"><a href="#整治方向" class="headerlink" title="整治方向"></a>整治方向</h2><h3 id="支付受理终端管理"><a href="#支付受理终端管理" class="headerlink" title="支付受理终端管理"></a>支付受理终端管理</h3><ul><li><p>银行卡受理终端</p><p><img src="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/Terminal_202006_Card.png" alt></p><blockquote><p>F -  终端生产厂商  - 深蓝青色<br>A - 收单机构 - 橘色<br>C -  清算机构 - 蓝色<br>五要素： 收单机构代码、特约商户编码、特约商户统一社会信用代码（小微商户为负责人身份证件号码）、特约商户收单结算账户、银行卡受理终端布放地址</p></blockquote></li><li><p>条码支付受理终端</p><ul><li><p>受理终端</p><p>终端序列号与五要素</p></li><li><p>辅助受理终端</p><p>四要素</p></li><li><p>收款条码</p><p>区分个人和特约商户</p></li></ul><blockquote><p>四要素： 收单机构代码、特约商户统一社会信用代码、特约商户收单结算账户和特约商户经营地址</p></blockquote></li><li><p>创新支付受理终端</p><p>至少提前30日向中国人民银行及其分支机构报告</p></li></ul><h3 id="特约商户管理"><a href="#特约商户管理" class="headerlink" title="特约商户管理"></a>特约商户管理</h3><ul><li>特约商户实名制</li><li>明确商户信息核验方式<ul><li>面对面</li><li>同步视频</li></ul></li><li>特约商户巡检要求</li></ul><h3 id="收单业务监测"><a href="#收单业务监测" class="headerlink" title="收单业务监测"></a>收单业务监测</h3><ul><li>交易信息的真实性和完整性</li><li>终端位置监测</li><li>特约商户资金结算监测</li><li>专项监测与信息核对<ul><li>边境地区</li><li>核对交易信息和五要素不一致的</li></ul></li></ul><h3 id="监督管理等相关内容"><a href="#监督管理等相关内容" class="headerlink" title="监督管理等相关内容"></a>监督管理等相关内容</h3><ul><li>相关市场主体报送落实情况和工作计划</li><li>明确对银行、支付机构、清算机构的违反行为相关罚则</li></ul><h2 id="解读"><a href="#解读" class="headerlink" title="解读"></a>解读</h2><p>该条法主要是解决：打击跨境赌博、电信诈骗等违法犯罪活动，切断黑灰产业资金链；相关的跨境赌博新闻可以参考：<a href="http://www.cyberpolice.cn/wfjb/html/zcjd/20200701/4739.shtml" target="_blank" rel="noopener">http://www.cyberpolice.cn/wfjb/html/zcjd/20200701/4739.shtml</a></p><p>现如今的条码支付或者叫二维码大家更熟知，大家的微信或者支付宝的二维码是有付款功能的，所以很多跑分平台（码商）利用大量个人收款条码来化整为零，从而给监管带来很大的难度。大概的操作流程请看下图；其资金的流向从原来原来的客户到支付机构的流向，转化为客户向客户C2C的流向了；</p><p><img src="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-terminal-202006/%E8%B7%91%E5%88%86.png" alt="跑分平台与赌博平台"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+          <category> 法规 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+            <tag> 中国人民银行法规 </tag>
+            
+            <tag> 终端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>21号文</title>
+      <link href="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no21/"/>
+      <url>/Payment/%E6%B3%95%E8%A7%84/rules-pboc-no21/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>缩写或简称泛滥的地方，非金融莫属了。21号文的全称是：中国人民银行关于强化银行卡受理终端安全管理的通知（银发〔2017〕21号）；看完觉得还是21号文更好交流。该规范规范了银行卡受理终端。</p></blockquote><a id="more"></a><h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><p><a href="http://www.pbc.gov.cn/tiaofasi/144941/3581332/3589575/index.html" target="_blank" rel="noopener">21号文</a></p><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><ul><li>加强终端安全管理</li><li>提升支付风险防控管理</li><li>防范电信网络诈骗以及伪卡欺诈</li><li>切实保护人民群众的财产安全和合法权益</li></ul><h3 id="措施"><a href="#措施" class="headerlink" title="措施"></a>措施</h3><h4 id="交易报文"><a href="#交易报文" class="headerlink" title="交易报文"></a>交易报文</h4><p>交易报文在下面的场景中需要包含必需的内容</p><table><thead><tr><th></th><th>ATM</th><th>POS</th></tr></thead><tbody><tr><td>本代本</td><td>- 终端代码</td><td>- 受理机构编码<br>- 商户编码<br>- 终端编码<br>- 终端序列号<br>- 终端应用版本编号</td></tr><tr><td>本代他</td><td>- 受理机构编码<br>- 终端编码</td><td>同上</td></tr></tbody></table><h4 id="受理终端注册管理"><a href="#受理终端注册管理" class="headerlink" title="受理终端注册管理"></a>受理终端注册管理</h4><h5 id="管理平台"><a href="#管理平台" class="headerlink" title="管理平台"></a>管理平台</h5><p>清算机构搭建受理终端注册管理平台，商业银行或者支付机构在其管理平台上注册终端信息。</p><h5 id="注册数据规范"><a href="#注册数据规范" class="headerlink" title="注册数据规范"></a>注册数据规范</h5><p>同步文件即商业银行或者支付机构在管理平台上的提交的终端信息文件，反馈文件即管理平台反馈给注册方的信息文件，主要包括了概要统计信息，例如总条数，成功条数，拒绝条数；如果有拒绝记录，则包括了拒绝记录的原始记录及其拒绝原因。</p><p>POS终端是需要商户信息的，因为POS是商户收单的机具。</p><table><thead><tr><th>ATM</th><th>POS</th></tr></thead><tbody><tr><td>ATM终端注册同步文件<br>ATM终端注册反馈文件</td><td>POS终端注册同步文件<br>POS终端注册反馈文件</td></tr><tr><td></td><td>商户注册同步文件<br>商户注册反馈文件</td></tr></tbody></table><h5 id="时间要求"><a href="#时间要求" class="headerlink" title="时间要求"></a>时间要求</h5><ul><li>新入网ATM终端至少于布放或变更前一个工作日完成终端信息注册</li><li>新入网POS终端至少于布放或变更后两个工作日完成终端信息注册</li></ul><h4 id="终端产品质量管理"><a href="#终端产品质量管理" class="headerlink" title="终端产品质量管理"></a>终端产品质量管理</h4><p>终端产品需要符合国家标准和金融行业标准</p><h4 id="受理终端支付风险防控"><a href="#受理终端支付风险防控" class="headerlink" title="受理终端支付风险防控"></a>受理终端支付风险防控</h4><ul><li>信息校验</li><li>风险监控</li><li>联动防控</li><li>密钥管理</li></ul><h2 id="解读"><a href="#解读" class="headerlink" title="解读"></a>解读</h2><p>该条法更多在于解决： 防范电信网络诈骗以及伪卡欺诈 ，因为近10年电信诈骗特别猖狂且疯狂增长，可以参考 <a href="https://www.sohu.com/a/114330177_454426/" target="_blank" rel="noopener">https://www.sohu.com/a/114330177_454426/</a> ；伪卡欺诈，可以参考：<a href="https://www.sohu.com/a/146377196_120702" target="_blank" rel="noopener">https://www.sohu.com/a/146377196_120702</a></p><p>同时参考银联最近的数据，伪卡欺诈依旧是主要的欺诈，不过非面对面欺诈呈逐年递增势头。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+          <category> 法规 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+            <tag> 中国人民银行法规 </tag>
+            
+            <tag> 终端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>银行卡清算机构管理办法</title>
+      <link href="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-clearing/"/>
+      <url>/Payment/%E6%B3%95%E8%A7%84/rules-pboc-clearing/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>法律法规枯燥之中又妙趣横生；因为它定义了规则。</p><p>《银行卡清算机构管理办法》对很多人支付行业的从业人员都无关紧要，因为它是清算机构而且基本是高层需要关心的。对于像鄙人这样的一个小螺丝钉，读一下此法规，虽然理解不是很透切，只能说对公司的启动以及运营等有个粗略的了解。</p></blockquote><a id="more"></a><p><a href="http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/3077866/index.html" target="_blank" rel="noopener">银行卡清算机构管理办法</a></p><p><img src="/Payment/%E6%B3%95%E8%A7%84/rules-pboc-clearing/rules_pboc_clearing_mindmap.svg" alt="脑图"></p><p>所以最慢成功的批准开业周期是1年7个月（30d + 90d + 1y + 90d），那最完美的最快速的批准开业周期就很难说了，一年算是好的了，因为一个清算交易系统以及相关的核心系统在一年内搞定可能也算是丰功伟绩了，更不用说搞定各种监管要求。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+          <category> 法规 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+            <tag> 中国人民银行法规 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Informatica退出中国大陆市场</title>
+      <link href="/%E9%9D%99%E5%A4%9C%E6%80%9D/thinking-infa-withdrawal/"/>
+      <url>/%E9%9D%99%E5%A4%9C%E6%80%9D/thinking-infa-withdrawal/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>2020年好像开年不利，各种灾难接踵而至，例如全球新型冠状病毒肺炎，洪灾等；而最近听朋友说Informatica退出中国大陆市场，有点震惊，不管什么原因，终究是有些无奈与无力。</p></blockquote><a id="more"></a><p>我是从Informatica出来的，来Informatica工作也开启了我的上海之旅，而且在Informatica结识了很多的国内国外和港澳台朋友，Informatica的<strong>INFAmily</strong>文化是成功的，不仅仅是员工有归属感，而且员工的家人也有归属感；因为公司从来没有忘记背后支持员工的家属，家属的医疗保险和员工是一样的，而且非常非常好；每次员工生日有蛋糕一起庆祝，员工家属生日有购物卡；而且每年GC Kickoff meeting是给家属也考虑进去的，前面几天员工开会，员工家属就去当地旅游，后面大家一起活动；关键是家里有喜事等，公司都有礼物准备。真的非常人性化的文化。</p><p>很多人会问，为什么如此之好的福利，还是有人会离职，例如我自己。其实每个人都有自己的职业规划，如果你想去外面闯荡，Informatica也是祝福你的，因为你出去了，只会扩大Informatica的影响力。这个是我提出离职时，某位老板告诉我的，让我不用有任何心理负担。</p><p>有人问，如果Informatica退出中国大陆市场，对我们离职的人或者即将被离职的人来说有什么影响；影响肯定是有的，但是不会是很大的，因为Informatica招聘进来的人都是各行各业的行家，大家都不是完全依赖于工具了，都有一套自己的思想和快速学习适应变化的能力，这就是每个人的核心竞争力；换一个跑道，依然可以适应和胜任。</p><p>最后，我知道还在Informatica里的大陆同事现在很难过，还在消化。但是我相信你们是最棒的，在新的事业里前途似锦，万事如意！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 静夜思 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 静夜思 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ATM取款</title>
+      <link href="/Payment/payment-trading-scenario/"/>
+      <url>/Payment/payment-trading-scenario/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>如果要使用现金，则需要将钱从卡中取出来，当然，取钱的途径很多， 例如1. 从柜台取钱； 2. 从ATM取钱；3.转账给他人，他人给现金给你；4. 去商户消费，然后商户给你现金。这里只讨论第2点。</p></blockquote><a id="more"></a><h2 id="两种场景"><a href="#两种场景" class="headerlink" title="两种场景"></a>两种场景</h2><h3 id="不跨行"><a href="#不跨行" class="headerlink" title="不跨行"></a>不跨行</h3><p>A银行的卡在A银行自己的ATM上取款</p><p>不跨行的情况，该笔ATM取款交易不需要经过卡组织的，直接是该银行自己处理。 有些有银行在有些场景也会收取手续费。例如，上海办理的卡，到广州的ATM取款就会收取手续费。</p><h3 id="跨行"><a href="#跨行" class="headerlink" title="跨行"></a>跨行</h3><p>A银行的卡在B银行的ATM上取款</p><p>因为涉及到跨行交易，那么资金需要经过卡组织进行批量清算，因此卡组织需要收取清算费，收单行需要收取交换费。</p><h2 id="交易流程"><a href="#交易流程" class="headerlink" title="交易流程"></a>交易流程</h2><p>这里以跨行的场景为例，A银行就是发卡行（Issuer），B银行就是收单行（Acquirer)，这里以取款1000元为例。</p><ol><li>B - ATM 向 卡组织 发起请求</li><li>卡组织将请求转发给A</li><li>A将请求信息回复给卡组织</li><li>卡组织将信息回复给B-ATM</li></ol><p>如果上述4步种任何一方出现了中断，例如第4步中，卡组织无法连接到B-ATM，无法将信息回复给B，那么卡组织这里会发起冲正交易；冲正交易会将原交易给冲正了，不会出现说你钱没有取到，但是卡里已经扣了的情况。</p><h2 id="交易数据分析"><a href="#交易数据分析" class="headerlink" title="交易数据分析"></a>交易数据分析</h2><h3 id="交易文件类型"><a href="#交易文件类型" class="headerlink" title="交易文件类型"></a>交易文件类型</h3><p>ATM取款这种交易会出现在COM类文件中，例如OOM/COMN。同时，同一笔交易，卡组织会生产两个文件：ICOM和ACOM，这两个文件大部分相同，部分不同，ICOM给银行A，ACOM给银行B。</p><p>所以区分一个文件到底是给收单机构还是给发卡机构，可以从交易文件的文件名上直接判断。 如果没有文件名的情况下，如何判断ATM取款数据到底是发卡机构还是收单机构的呢？</p><p>答案是可以的，1） 根据交易类型，以及Fee（费）的借贷标志; 2）如果是COMN类型的，可以直接看扩展字段，有些字段是发卡方文件独有的，例如商户名称以及Token；有些字段是收单方文件所独有的，例如订单号，当然，不是所有支付场景，扩展字段中独有字段都有值。</p><p>第1种情况，针对ATM取现，交换费（Fee1）和转接清算费（Fee2）的借贷记标志，对于发卡行，它需要支付这两个费用给卡组织和收单行，所以对于这两个Fee的借贷记标志是D。但是对于收单机构，则没有该费用。</p><h3 id="交易类型"><a href="#交易类型" class="headerlink" title="交易类型"></a>交易类型</h3><p>如果从交易数据中判断该笔交易为ATM取款，那从哪些维度可以来确定呢？</p><ol><li>终端类型（Terminal Type) 如果是ATM取款，那么终端类型应该是ATM  <!-- 01 -->;</li><li>交易类型 交易处理码中前两位是交易类型为现金 <!-- 01 -->；</li><li>交易的报文类型 从报文类型标识符来看该笔交易的报文类型为请求类交易：0200，而不是ATM取款发生冲正的时候冲正类交易：0420。</li><li>服务点条件码 是交易处理码（第2点）的补充，其值应该是自助终端 <!-- 02 -->。</li></ol><p>综上，从这4个维度就可以将一笔交易确定为ATM取款。当然，如果商户类型代码存在，或者准确，那么可以直接使用商户类型代码来确定也是可以的。</p><h2 id="费用划付"><a href="#费用划付" class="headerlink" title="费用划付"></a>费用划付</h2><p>ATM取现的费用，由发卡机构支付。即：</p><ol><li>收单机构收取交换费；</li><li>卡组织收取转接清算费。</li></ol><h2 id="一点思考"><a href="#一点思考" class="headerlink" title="一点思考"></a>一点思考</h2><p>一般来说，一张卡整存整取，卡内不留余额等情况可能参与了洗钱活动；可以看<strong>《反腐风云》</strong>赛马会那部。</p><p>另外，引言的第4点是套现，<em>违法行为</em>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+            <tag> 交易场景 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>猎狐</title>
+      <link href="/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/payment-tv-hunt-fox/"/>
+      <url>/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/payment-tv-hunt-fox/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>“猎狐” 经济犯罪类电视剧，还是非常精彩的，不管是表演，有我喜欢的演员；当然还有剧情，对于本人刚进入支付行业的新人来说，里面很多的经济犯罪行为值得学习。</p></blockquote><a id="more"></a><p><img src="/Payment/%E7%94%B5%E8%A7%86%E5%89%A7/payment-tv-hunt-fox/540x303.jpg" alt="猎狐剧照，来源于百度"></p><p>猎狐中有很多经济犯罪行为，</p><ol><li><p>操纵股市</p><p>例如利用媒体散布肝克净研发消息，然后股民为之兴奋，股价上涨，然后王柏林趁机抛售手中的股票，从而大赚一笔；</p></li><li><p>贷款诈骗<br>王柏林以回扣诱惑了支行主任，骗取贷款；哈哈，最搞笑的，是支行行长在这部剧里真的一点主见都没有。全程都被支行主任玩得团团转，而且最后还得被侮辱。</p></li><li><p>集资诈骗</p><p>马世才以理财高收益为诱饵，骗取人钱财</p></li></ol><p>最后的剧情是境外较量，比较精彩，美国看重的是申请绿卡的人在美国的行为是否违法，不管申请人以前是否违法等，所以最后的突破口，就是以王柏林的真实财产证明与其申报的财产差异巨口为突破口，然后成功打破王柏林的绿卡梦。</p><p>整个电视剧看完，真的还是非常有价值的，涨涨见识，已经看看经济犯罪的一般行为以及如何故事有趣。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+          <category> 电视剧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+            <tag> 经济犯罪 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>支付系统架构</title>
+      <link href="/Payment/payment-architecture/"/>
+      <url>/Payment/payment-architecture/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>这个是我认为的支付系统架构，后续再完善。</p></blockquote><a id="more"></a><!-- ![支付架构](payment-architecture/architecture.png)-->]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>支付战争</title>
+      <link href="/Payment/%E4%B9%A6%E7%B1%8D/payment-book-paypal-war/"/>
+      <url>/Payment/%E4%B9%A6%E7%B1%8D/payment-book-paypal-war/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>支付战争，其英文 The Paypal War，更能体现其故事的主体是什么。Paypal 出来的人都是支付大牛，所以，业界都称为Paypal黑帮。所以支付战争非常值得一探。</p></blockquote><a id="more"></a><p>《支付战争》这本书看完了很久了，这本书非常建议自己去看看，因为它是Paypal创业时营销核心人员，所以本书以回忆和故事的方式来展现整个Paypal打下支付这一半壁江山的过程，可谓跌宕起伏，每一步都扣人心弦；好多都忘记了，后面有时间在看一遍。</p><p>Peter去斯坦福大学做了“市场全球化和政治自由之间的联系”的演讲，有个IT小伙子Max去听了，并且线下和Peter聊了，结果两人一聊就一拍即合，搞了一个加密的公司；这种场景大家听过很多了吧，例如谷歌的创始人也是听了演讲成了谷歌搜索；回到故事，他们后面转变成支付公司confinity，其宗旨就是做支付领域的微软，统治世界。后面他们借助Ebay的拍卖，然后占据了支付市场核心地方。当然后面又和Ebay自己的支付竞争，然后又和X.COM较量，其中，X.COM就有现在搞火箭飞上天的Elon Musk;最后和X.COM合并了，不过最后的结局大家都是知道的，被Ebay收购了。</p><p>其实故事线基本上可以从上面一段话可以简述，其中有几句非常经典的语句个人觉得非常好</p><blockquote><p>未来的银行只是有银行牌照的技术公司</p><p>交易是商业核心行为，商业最终都是交易，而交易都是通过支付完成</p><p>为了保护消费者活动而建立的机构却为了满足政府越来越细致、越来越复杂的要求让一个又一个行业付出了沉重的代价</p></blockquote><p>其中有很多值得学习的地方</p><ol><li>团队开放</li><li>信任</li><li>信念</li><li>创新</li></ol><p>从整个历程来看，每一次合并都有一些核心人员的离去，合并很多时候意味着价值观的转变，而且这些人都有一些情结或者傲娇，一旦不符合自己的价值观或者不再是自己所追寻的，就会离去；其实没有离去的人，可能也没有以前那么坚定或者全心全意的投入了，所以现在就很能理解为什么一流公司靠文化，二流公司靠流程，三流公司靠能人。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+          <category> 书籍 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何确定一笔交易</title>
+      <link href="/Payment/payment-confirm-trx/"/>
+      <url>/Payment/payment-confirm-trx/</url>
+      
+        <content type="html"><![CDATA[<h2 id="确定一笔交易的要素"><a href="#确定一笔交易的要素" class="headerlink" title="确定一笔交易的要素"></a>确定一笔交易的要素</h2><p>如何确定一笔交易，在ISO8583协议里就已经明确的定义了下面四个域来唯一确定一笔交易</p><ol><li>交易时间  - F7 </li><li>收单机构 - F32</li><li>系统跟踪号 - F11</li><li>发送机构 - F33</li></ol><a id="more"></a><p>前面【1，2】两项是收单机构提供的信息，即交易时间是收单机构在创建交易的时间；</p><p>后面【3，4】两项是发送机构提供的信息，即系统跟踪号是发送机构在收到订单时分配的唯一的ID，也就说同一秒钟，发送机构的系统跟踪号是唯一的。</p><!-- 为啥这四个要素就可以确定唯一一笔交易呢？一笔交易肯定是要经过收单和发卡，那么再加上时间和序列号就唯一确定了，确实设计得很妙和简洁；--><blockquote><p>发送机构 一般是收单机构的总部。</p></blockquote><p>一笔交易确定之后，其他的附加属性来判断是什么交易场景或者交易状态等；</p><p>交易状态例如交易请求还是冲正，根据报文类型标识符来判断，交易请求是0200；交易冲正是0420；</p><p>交易场景例如转账，可以根据交易处理码前2位判断是转账，转出转账还是转入转账。</p><h2 id="限制"><a href="#限制" class="headerlink" title="限制"></a>限制</h2><p>从ISO8583协议里可以看到对上面四个域的定义，其中交易时间为月日时分秒，系统跟踪号为6位数字。那么理论上来说一秒钟内发送机构的最大交易峰值为100万笔。如果超过的话，发送机构可能需要卡在下一秒再处理上一秒未处理完的交易。</p><!-- 不过大多数发送机构的交易处理能力都达不到这个标准，而且现阶段也很难达到交易峰值。--><p>以前听坊间传闻说，银行和阿里对接时，发现最后交易瓶颈都因为银行的系统处理能力达到了上限；</p><p>另外，从现在天猫双十一的交易情况来看，现在也没有超过100万笔上限，况且这些交易都还不是同一个发送机构；</p><p>所以现阶段还是安全的。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2018年天猫双11每秒订单创建峰值49.1万笔</span><br><span class="line">2019年天猫双十一，阿里巴巴核心系统100%上云，每秒交易峰值54.4万笔</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>金融的理解</title>
+      <link href="/Payment/fin-service/"/>
+      <url>/Payment/fin-service/</url>
+      
+        <content type="html"><![CDATA[<p>金融是什么，在没有接触金融相关的时候，真的觉得太高深了，头大，也不想去了解它。现在接触到金融相关的，还是一样的感觉，头大，太复杂了。</p><p>不过不管是什么复杂，其本质就服务，金融服务就是服务，那么如何提高服务质量，就需要重新定义支付场景，例如，现在的刷脸支付等都是很好的尝试，但重新定义支付场景都需要考虑时间和空间因素。</p><a id="more"></a><ol><li>时间维度上，尽可能的减少过程时间；</li></ol><p>对于消费者可以快速看到资金变化情况，例如你买的理财，不需要T+1或者T+3才到账；对于商户来说，那么希望资金可以实时到账，减少到账时间，提高资金的周转。</p><p>使用方式更加便捷，更加省时省力，让一切都不在繁琐，客户的体验感舒适。</p><ol start="2"><li>对于空间来说，让空间限制越来越小。</li></ol><p>资金能够透明地跨区域，例如，我到国外旅游，那么我能够自由的使用现有的卡，不管是银联发的卡，还是Visa；因为现阶段，拿着银联的卡去东南亚地区是可以的，但是去其他国家，例如印度或者美国等国家是不能使用的。另外，现在还有一些地方是明确禁止使用某些卡的。</p><p>另外，在网络空间影响更小，在无网络或者弱网络信号的时候，这些影响不再是影响支付的因素。</p><p>总之，重新定义的支付场景都得从时间和空间来衡量，如果解决了任何一个方面，那么此支付场景就是有效的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于团队知识共享的一些思考</title>
+      <link href="/Team/team-sharing/"/>
+      <url>/Team/team-sharing/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于团队知识共享的一些思考"><a href="#关于团队知识共享的一些思考" class="headerlink" title="关于团队知识共享的一些思考"></a>关于团队知识共享的一些思考</h1><p>团队知识共享，大家都会认同是百利无一害的，但是在一个公司里又谁在做到知识共享呢？</p><p>是不是感到很奇怪？这么好的事情为啥又没有人喜欢呢？哈哈，真有点像渣男渣女讨人爱，好人就该没对象。今天我就谈谈我对团队知识共享的一些历程吧。</p><a id="more"></a><p>因为我从一毕业就在外企工作，外企的一些文化似乎深得大家喜欢；记得以前在HP，惠普之道深入人心，并不是需要去记住什么是惠普之道，而是在与同事一起讨论工作上的事情，一起吃饭谈谈项目情况或者什么有趣的事情，而且每天中午吃完饭都会在园区里溜达一圈消消食等等各种小事之间体会到什么是惠普之道。而在惠普的有段时间里，我从事了运维相关的工作，对的，就是7*24h没有正常作息时间的那种；每天3班倒，倒班时就需要交接，交接不清楚那么接班的人就很难处理，每个人都不希望这样，所以做好交接是一件非常重要的事情。所以交接时，都会把自己手上的事情解释的明明白白。</p><p>把事情解释得明明白白可不是一件容易的事情，每个人的背景或者专长都不一样，所以你要把事情解释清楚，一得看你能否说得清楚，另外还得看对方能否听得明白。</p><p>不过，我们都不会怀疑第一点，因为对于你要描述的事情，你自己是清楚的，所以不管我们怎么表述，我们都是明白的。很多人说，那我提升自己的口才，提升自己的口才这种软实力进步慢而且很长一段时间甚至没有效果，说不定还没到达彼岸就放弃了。别问我是怎么知道的，这个我是不会告诉你的。</p><p>个人觉得让对让对方听得明白，那就让对方懂你，毕竟懂你的才更显珍贵。一个最直接的方式，就是分享你的知识，把你的知识共享给对方，先从一些大家都知道的开始，然后添加一些自己一些特有的知识或者见解，让大家逐步接受你的知识，大家都懂你所说懂你所想，何尝不是一种幸福。同时，在分享过程中，也在丰富完善自己的知识体系，顺便也让你在不知不觉的分享过程中提升了自己的口才。</p><p>有人内心会想，把自己擅长的分享出去了，别人都能替换我，那么不是很容易被替代了吗？常言道，教会徒弟，饿死师傅，如果组织架构优化过程中，那么岂不是被优化的那批人？</p><p>是的，或许不是所有的行业或者职业都适合，但是我是从两个方面来看的：</p><ol><li>从自身来说，分享是个互动的过程，我们分享知识的过程中也在学习新的知识，同时，你也不用花时间去解释或者亲自去解决的事情了，把自己从繁杂的事情中解放出来，那么你可以腾出时间来学习思考新的知识了，或者有时间做点自己喜欢的事情了。</li><li>从管理层来看，也不希望有些事情只有一个人能够处理，<strong>张小平离职事件</strong>也充分提醒了不要把鸡蛋放到一个篮子里，同时也怕能人不服管。</li></ol><p>而分享能带来双赢，而首先需要转变自己的思维。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Team </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Team </tag>
+            
+            <tag> Sharing </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>央妈在新冠状病毒疫情结束之后的操作</title>
+      <link href="/Payment/yangma-coronavirus-actions/"/>
+      <url>/Payment/yangma-coronavirus-actions/</url>
+      
+        <content type="html"><![CDATA[<p>大家都说新冠状病毒疫情影响很大，那为啥这么说，又是如何影响的，央妈又是如何应对这种影响的？</p><a id="more"></a><p>疫情影响了各个领域，经济的齿轮⚙是环环相扣的，从小到每个人的衣食住行，到企业的生死存亡，大到国家的经济发展与金融秩序。</p><p>央妈出台了很多的新政策，让银行在疫情期间给实业搭一把手，所以就得让银行能够有资金来搭手，例如<a href="www.pbc.gov.cn/goutongjiaoliu/113456/113469/4002587/index.html">超额准备金利率从0.78%小调到0.38%，让银行的资金更多的流向市场</a>, 而且从<a href="http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/3993125/index.html" target="_blank" rel="noopener">“应对国际疫情影响，维护金融市场稳定”发布会实录</a> 也可以看到很多的消息； 另外，有些符合条件的银行还降准了；对于个人，房贷可以申请延迟偿还；对于民营或者小微企业，提供差异化优惠金融服务让其有资金去恢复生产等等，然后消除不良贷款风险。</p><p>所以整个链路如下</p><p><img src="/Payment/yangma-coronavirus-actions/image-20200510163215695.png" alt="image-20200510163215695"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 疫情 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何理解支付</title>
+      <link href="/Payment/payment-dependencies-md/"/>
+      <url>/Payment/payment-dependencies-md/</url>
+      
+        <content type="html"><![CDATA[<p>在支付行业，其背后有很多知识学科做支撑，也有很多的专业术语需要去理解。如果想要对支付更好的理解，需要补充很多的知识。经过这段时间，自学了微观经济学，以及还在学习的会计学原理，有一点小的体会，就记录于此。</p><a id="more"></a><h2 id="交易类型"><a href="#交易类型" class="headerlink" title="交易类型"></a>交易类型</h2><p>整个经济过程中，由无数的交易组成，而交易的类型分为两种</p><ul><li><p>货币</p><p>例如早上小李去小刘早餐店购买了一碗重庆小面，支付了现金6元。当然，微信支付宝等支付也算这种交易。</p></li><li><p>信贷</p><p>小李经常在小刘早餐店买早餐，所以小李和小刘早餐店老板刘老板也熟悉了，刘老板觉得小李人还不错，所以小李有一天忘记带钱了，就给刘老板说，这次先欠着，下次一起支付。这个过程叫做信贷，对于小刘来说，她是债权人，小李是债务人。此时相当于向小刘借款，不过后面是需要还的，也类似于向未来的自己借钱。</p></li></ul><p>其实在我们平常的经济活动中，遇到的最多的就是货币交易；但事实是信贷交易的金额占所有交易的95%，因为企业或者个人贷款等等是整个经济活动的金额大头，正如下图冰山图示。</p><p><img src="/Payment/payment-dependencies-md/image-20200412104955323.png" alt="货币信贷比例"></p><p>在水面之下的信贷影响也是最大的，我们知道的2008年的全球金融次贷危机也是这部分导致的。</p><h2 id="货币或者信贷是如何在交易中流通"><a href="#货币或者信贷是如何在交易中流通" class="headerlink" title="货币或者信贷是如何在交易中流通"></a>货币或者信贷是如何在交易中流通</h2><p>前面我们说整个经济活动是由无法交易组成，那么这些交易是如何影响经济活动的，或者说这些钱（包括信贷）是如何交易中流通的。我们假设只有两个人参与这次交易：小李和小刘早餐店刘老板。这里分下面两个场景：</p><ol><li><p>小李去小刘早餐店去买重庆小面并支付了6元，那么这个过程，小李将自己的工资收入中拿出6元，然后支付给刘老板，此时，刘老板的收入增加了6元；所以一个人的收入来自于另一个人的支出。</p></li><li><p>如果有一天小李想吃牛肉面，需要8元，而自己只有6元，此时他使用信用卡支付了2元。那么小李的支出包括两部分：a. 自己的收入：6元； b.自己的信贷：2元；那么刘老板的收入为8元。所以一个人的收入+信贷组成了另外一个人的收入。</p></li></ol><p>一个人的支出能力主要看两部分：收入和信贷；所以简单总结一下：</p><blockquote><p> 支出 = 收入 + 信贷</p></blockquote><p>那么交易过程中涉及金额转移，那么支付就出现了。</p><p><img src="/Payment/payment-dependencies-md/image-20200412130648501.png" alt="支付模型"></p><h2 id="支付"><a href="#支付" class="headerlink" title="支付"></a>支付</h2><p>支付从上述过程中看似简单，从申请一张银行卡或者信用卡，到消费一笔交易时，整个流程会发现有很多方组织参与：央行，卡组织，发卡行，收单机构，第三方收单机构。</p><p>在我们的印象中，如此简单的支付过程，为啥会涉及如此多的组织呢？因为在现在生产力的提高、社会分工精细化、制度和工具越来越成熟健全，以及从量到质的变化。</p><p>为了理解上面的原因，举几个例子</p><ol><li>1983年，中国人民银行才开始行使中国国家中央银行职能，也就说央妈是从1983年才开始成立的。到20世纪末和21世纪初，又从央妈中分离出了证监会，保监会，银监会，各个部门只能更加专一。</li><li>2002年，中国第一个卡组织银联才成立，负责打通各个发卡机构与收单机构的资金清结算网络，方便消费者，同时，更好的监控和了解交易情况。</li><li>从最新银联公布的数据，<a href="https://cn.unionpay.com/upowweb/upOverview" target="_blank" rel="noopener">至2019累计发行银联卡80多亿张</a>, 从<a href="http://data.stats.gov.cn/search.htm?s=总人口" target="_blank" rel="noopener">国家人口数据</a>获知到2019年末为140005万人，人均<strong>5</strong>张多银联卡；</li></ol><h2 id="组织机构关系"><a href="#组织机构关系" class="headerlink" title="组织机构关系"></a>组织机构关系</h2><p><img src="/Payment/payment-dependencies-md/image-20200412164817326.png" alt="组织关系图"></p><p>为了更好说明各个组织间的关系，我这里画了一个简图。在前面提到2002年才成立中国第一个卡组织银联，那么在银联成立之前，那么中间是没有银联的，此时交易是怎么回事呢？这个时候还没有第三方收单机构，银行既是发卡机构也是收单机构，自己发卡，自己收单，而且不支持另外一家的卡。下面通过三个例子来说明，</p><ol><li>你办理了一张招商银行的卡，然后去购物商家那里刷卡，商家得拿出招商银行的POS机来刷卡；如果刚好这个商家不支持招商银行，那么就无法刷卡。</li><li>另外一个现象就是去ATM取款等操作，招商银行只能去招商银行的ATM机，如果去工商银行ATM，对不起，不支持。</li><li>如果你需要从招商银行转账到工商银行，是需要支付手续费的，而且背后实现的原理是：工商银行和招商银行彼此在对方银行开立账户，通过此账户来实现资金转账。这样对各个机构来说，需要在其他机构下开立账户，这样白白的占用了大量资金。</li></ol><p>后面在央妈的牵头下，主要的85家机构共同出资成立了银联，相当于大家一起做老板，有蛋糕大家一起分着吃。</p><p>连线序列不代表先后顺序，而是为了更好的解释说明，同时，这里会屏蔽一些其它的因素，只涉及我自己描述相关的因素。</p><!--    1. 发卡机构得经过央妈批准和监督，且得在央妈开立账户，存入必需的存款准备金，以及超额准备金。    2. 卡组织得经过央妈批准和监督，负责银行卡跨行信息交换网络以及资金清算    3. 收单机构或者第三方收单机构得经过央妈批准和监督，负责受理银行卡业务。好像听说银行收单业务，对银行的利润比例不是特别大，我觉得更多的是收单的竞争太激烈了。    4. 卡组织和发卡机构的关系，a. 发卡机构要发卡，得到卡组织申请BIN号，下表是我从[银行卡BIN码大全](https://blog.csdn.net/zhaohong_bo/article/details/80225815)拷贝了一部分来举例，深圳发展银行发行了三种类型的卡：金卡，普卡和发展卡，可以从BIN区别开来。注意，62是中国银联的标识。b. 在跨行交易时，一些交易文件会发送给发卡机构，当然发卡机构也会发送给卡组织。 c. 在跨行交易时，资金清算之后的轧差会发送给发卡机构。d. 有异常交易等处理平台       | 银行名称     | 机构代码 | 卡类别           | 卡种   | 位数 | BIN号  |       | ------------ | -------- | ---------------- | ------ | ---- | ------ |       | 深圳发展银行 | 3070000  | 人民币信用卡金卡 | 贷记卡 | 16   | 622525 |       | 深圳发展银行 | 3070000  | 人民币信用卡普卡 | 贷记卡 | 16   | 622526 |       | 深圳发展银行 | 3070010  | 发展卡           | 借记卡 | 16   | 622538 |       |              |          |                  |        |      |        |    5. 收单机构和发卡机构类似。不过收单机构不用去卡组织申请BIN号。    6. 消费者到发卡机构申请卡。    7. 申请卡时可以选择不同的卡组织和不同的卡类别，对应的权益也不同。    8. 商户需要到卡组织关联，卡组织会针对不同类型的商户或者特定时间特定地域给与不同的费率。    9. 商户需要和收单机构签约。    10. 消费者拿卡去商户消费。--><p>上述过程，其实消费者在拿卡使用POS机消费之后，可以从小票看到上述发卡行信息，卡BIN信息，从卡BIN信息就知道使用了哪个卡组织，同时，也可以看到商户信息，以及商户对应的收单机构信息等等信息，所以一张小票，提供了很多交易相关信息。下图就是我自己在全家消费的POS小票。</p><p><img src="/Payment/payment-dependencies-md/image-20200412211417906.png" alt="image-20200412211417906"></p><h2 id="支付背后的会计支撑"><a href="#支付背后的会计支撑" class="headerlink" title="支付背后的会计支撑"></a>支付背后的会计支撑</h2><p>当时学习时，对对账文件中借贷总是不能理解，总是要和显示生活中的借贷行为联系上。后面在看了会计学原理之后，才算真正理解过来：借贷只是一种表示符号，不代表任何意义，借在左边，贷在右边而已，而且有借必有贷，借贷必相等。</p><p>借贷到底是增加还是减少，还得从静态会计恒等式说起：</p><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">资产 = 负债 + 所有者权益</span><br></pre></td></tr></table></figure><p>资产在等式的左边，所以对于资产的增加在借方，资产的减少在贷方。</p><p>而负债和所有者权益在等式的右边，所以对于这两个来说，增加在贷方，减少在借方。</p><p>另外一个还有一个坑人的地方，就是借贷的英文单词：Debit和Credit。Credit代表了贷，而Debit代表了借。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>payment 2019/10/21</title>
+      <link href="/Payment/payment-20191021/"/>
+      <url>/Payment/payment-20191021/</url>
+      
+        <content type="html"><![CDATA[<p>从2020年10月21日开始正式入职金融相关的行业，对能够进入自己一直想进入的行业充满了期待，也对自己对金融相关的知识是一片空白感到挑战；有挑战才有成长，所以我将在这里记录下自己对支付相关的学习历程和体会。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Payment </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Payment </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

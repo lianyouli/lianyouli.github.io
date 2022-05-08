@@ -1166,7 +1166,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c8ffb9;
+  background: #f0ff53;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1470,42 +1470,6 @@ pre .javascript .function {
   }
   50%, 70% {
     transform: scale(1.1);
-  }
-}
-.back-to-top {
-  font-size: 12px;
-  text-align: center;
-  transition-delay: 0s;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-}
-.back-to-top {
-  background: #222;
-  bottom: -100px;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  left: 30px;
-  opacity: 1;
-  padding: 0 6px;
-  position: fixed;
-  transition-property: bottom;
-  z-index: 1300;
-  width: 24px;
-}
-.back-to-top span {
-  display: none;
-}
-.back-to-top:hover {
-  color: #87daff;
-}
-.back-to-top.back-to-top-on {
-  bottom: 19px;
-}
-@media (max-width: 991px) {
-  .back-to-top {
-    left: 20px;
-    opacity: 0.8;
   }
 }
 .post-body {
@@ -2173,6 +2137,86 @@ ul.breadcrumb li + li:last-child {
 }
 .tag-cloud a:hover {
   color: var(--link-hover-color) !important;
+}
+.highlight-container {
+  position: relative;
+  background-color: highlight-background;
+}
+.highlight-container.on .highlight-footer {
+  display: none;
+}
+.highlight-container.on .hide-btn {
+  display: flex;
+}
+.highlight-container.on .highlight-wrap {
+  max-height: none;
+}
+.highlight-container .highlight-wrap {
+  overflow: hidden;
+  max-height: 200px;
+}
+.highlight-container .highlight-footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  background-image: linear-gradient(-180deg, rgba(255,255,255,0) 0%, highlight-background 65%);
+  text-align: center;
+}
+.highlight-container .show-btn {
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  line-height: 2em;
+  text-decoration: none;
+  padding: 0 0.8em;
+  text-align: center;
+  border-radius: 4px 4px 0;
+}
+.highlight-container .show-btn:hover {
+  text-decoration: none;
+}
+.highlight-container .hide-btn {
+  color: #fff;
+  font-size: 12px;
+  width: 22px;
+  position: absolute;
+  left: -21px;
+  top: 0;
+  line-height: 1em;
+  text-decoration: none;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  background-color: highlight-background;
+  border-radius: 4px 0 0 4px;
+  padding: 0.1em 0 0.6em;
+  transition: top ease 0.35s;
+}
+.highlight-container .fa-angle-up,
+.highlight-container .fa-angle-down {
+  font-style: normal;
+  color: #fff;
+}
+.highlight-container .fa-angle-up:before {
+  content: "\f106";
+}
+.highlight-container .fa-angle-down:before {
+  content: "\f107";
+  margin-left: 0.5em;
+}
+.highlight-container .js_unfold_code_btn,
+.highlight-container .js_retract_code_btn {
+  background: rgba(0,0,0,0.5);
+  border-bottom: none !important;
+}
+.highlight-container .js_unfold_code_btn:hover,
+.highlight-container .js_retract_code_btn:hover {
+  border-bottom-color: none !important;
 }
 hr {
   height: 2px;

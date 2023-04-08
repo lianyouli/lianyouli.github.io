@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lianyouli.gitee.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="使用python开发一套简单的插件框架是比较快的，可以利用importlib ，可以参考Building a minimal plugin architecture in Python - Stack Overflow这里还是关注在python 插件框架 - yapsy上">
+<meta property="og:type" content="article">
+<meta property="og:title" content="it-python-plugin">
+<meta property="og:url" content="https://lianyouli.gitee.io/uncategorized/it-python-plugin/index.html">
+<meta property="og:site_name" content="联友的Blog">
+<meta property="og:description" content="使用python开发一套简单的插件框架是比较快的，可以利用importlib ，可以参考Building a minimal plugin architecture in Python - Stack Overflow这里还是关注在python 插件框架 - yapsy上">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-04-07T22:08:39.000Z">
+<meta property="article:modified_time" content="2023-04-08T03:41:56.060Z">
+<meta property="article:author" content="李联友">
+<meta property="article:tag" content="IT，PYTHON, PLUGIN">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://lianyouli.gitee.io/uncategorized/it-python-plugin/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>it-python-plugin | 联友的Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?eb9f10e46b1f09801805fc668f13d477";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="联友的Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">联友的Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">密涅瓦的猫头鹰在黄昏起飞</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">25</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">31</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lianyouli.gitee.io/uncategorized/it-python-plugin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="李联友">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="联友的Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          it-python-plugin
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-04-08 06:08:39 / 修改时间：11:41:56" itemprop="dateCreated datePublished" datetime="2023-04-08T06:08:39+08:00">2023-04-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<blockquote>
+<p>使用python开发一套简单的插件框架是比较快的，可以利用<code>importlib</code> ，可以参考<a href="https://stackoverflow.com/questions/932069/building-a-minimal-plugin-architecture-in-python" target="_blank" rel="noopener">Building a minimal plugin architecture in Python - Stack Overflow</a><br>这里还是关注在python 插件框架 - yapsy上</p>
+</blockquote>
+</blockquote>
+<a id="more"></a>
+<h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install yapsy</span><br></pre></td></tr></table></figure>
+
+<h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><p><a href="https://stackoverflow.com/questions/5333128/yapsy-minimal-example" target="_blank" rel="noopener">python - Yapsy minimal example - Stack Overflow</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── plugins</span><br><span class="line">│   ├── __pycache__</span><br><span class="line">│   │   └── plugin1.cpython-39.pyc</span><br><span class="line">│   ├── plugin1.py</span><br><span class="line">│   └── plugin1.yapsy-plugin</span><br><span class="line">└── <span class="built_in">test</span>-main.py</span><br></pre></td></tr></table></figure>
+<h2 id="test-main-py"><a href="#test-main-py" class="headerlink" title="test-main.py"></a>test-main.py</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Author: Arthur lianyoucq@163.com</span></span><br><span class="line"><span class="string">Date: 2023-04-07 21:57:57</span></span><br><span class="line"><span class="string">LastEditors: Arthur</span></span><br><span class="line"><span class="string">LastEditTime: 2023-04-08 06:19:50</span></span><br><span class="line"><span class="string">Description: invoke the plugin</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="keyword">from</span> yapsy.PluginInfo <span class="keyword">import</span> PluginInfo</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">from</span> yapsy.PluginManager <span class="keyword">import</span> PluginManager</span><br><span class="line"></span><br><span class="line">logging.basicConfig(level=logging.DEBUG)</span><br><span class="line"></span><br><span class="line">manager = PluginManager()</span><br><span class="line">manager.setPluginPlaces(directories_list=[<span class="string">"plugins"</span>])</span><br><span class="line">manager.collectPlugins()</span><br><span class="line">i = <span class="literal">None</span>  <span class="comment"># type: PluginInfo</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> manager.getAllPlugins():  <span class="comment"># type: PluginInfo</span></span><br><span class="line">    logging.debug(<span class="string">"##############"</span>)</span><br><span class="line">    i.plugin_object.transform(text=&#123;<span class="string">"Hello"</span>: <span class="string">"World"</span>&#125;)</span><br><span class="line">    logging.debug(<span class="string">"##############"</span>)</span><br><span class="line">    </span><br><span class="line">    logging.info(hasattr(i.plugin_object, <span class="string">'transform'</span>))</span><br><span class="line">    p = getattr(i.plugin_object, <span class="string">'transform'</span>)</span><br><span class="line">    logging.debug(<span class="string">"##############"</span>)</span><br><span class="line">    p(text=&#123;<span class="string">"hello"</span>: <span class="string">"arthur"</span>&#125;)</span><br><span class="line"></span><br><span class="line">    logging.debug(<span class="string">"##############"</span>)</span><br><span class="line">    logging.info(i.description)</span><br><span class="line">    logging.info(i.author)</span><br><span class="line">    logging.info(i.version)</span><br></pre></td></tr></table></figure>
+
+<h2 id="plugin1-py"><a href="#plugin1-py" class="headerlink" title="plugin1.py"></a>plugin1.py</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author: Arthur lianyoucq@163.com</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Date: 2023-04-07 22:06:17</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">LastEditors: Arthur</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">LastEditTime: 2023-04-07 22:19:45</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Description: show plugin</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="keyword">from</span> yapsy <span class="keyword">import</span> IPlugin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PluginOne</span><span class="params">(IPlugin.IPlugin)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">transform</span><span class="params">(self, text: dict)</span>:</span></span><br><span class="line">        print(<span class="string">"transform the data"</span>, text)</span><br></pre></td></tr></table></figure>
+
+<h2 id="plugin1-yapsy-plugin"><a href="#plugin1-yapsy-plugin" class="headerlink" title="plugin1.yapsy-plugin"></a>plugin1.yapsy-plugin</h2><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Core]</span></span><br><span class="line"><span class="attr">Name</span> = Plugin <span class="number">1</span></span><br><span class="line"><span class="attr">Module</span> = plugin1</span><br><span class="line"></span><br><span class="line"><span class="section">[Documentation]</span></span><br><span class="line"><span class="attr">Author</span> = Arthur Li</span><br><span class="line"><span class="attr">Version</span> = <span class="number">1.3</span>.<span class="number">3</span></span><br><span class="line"><span class="attr">Website</span> = https://lianyouli.gitee.io/</span><br><span class="line"><span class="attr">Description</span> = just a demo plugin</span><br></pre></td></tr></table></figure>
+<p>这个配置可以从<code>PluginManager.py</code>文件中找到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">Plugin Info File Format</span><br><span class="line"></span><br><span class="line">-----------------------</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">The plugin info file is a text file *encoded in ASCII or UTF-8* and</span><br><span class="line"></span><br><span class="line">gathering, as its name suggests, some basic information about the</span><br><span class="line"></span><br><span class="line">plugin.</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">- it gives crucial information needed to be able to load the plugin</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">- it provides some documentation like information like the plugin</span><br><span class="line"></span><br><span class="line">author&#39;s name and a short description fo the plugin functionality.</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">Here is an example of what such a file should contain::</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">[Core]</span><br><span class="line"></span><br><span class="line">Name &#x3D; My plugin Name</span><br><span class="line"></span><br><span class="line">Module &#x3D; the_name_of_the_pluginto_load_with_no_py_ending</span><br><span class="line"></span><br><span class="line">[Documentation]</span><br><span class="line"></span><br><span class="line">Description &#x3D; What my plugin broadly does</span><br><span class="line"></span><br><span class="line">Author &#x3D; My very own name</span><br><span class="line"></span><br><span class="line">Version &#x3D; the_version_number_of_the_plugin</span><br><span class="line"></span><br><span class="line">Website &#x3D; My very own website</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">....</span><br><span class="line">DEBUG:yapsy:correct subclass tests failed <span class="keyword">for</span>: __spec__ <span class="keyword">in</span> /Users/arthur/Documents/Workspace/python/lab/hello-plugins/plugins/plugin1</span><br><span class="line"></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line"></span><br><span class="line">File <span class="string">"/Users/arthur/opt/miniconda3/lib/python3.9/site-packages/yapsy/PluginManager.py"</span>, line 530, <span class="keyword">in</span> loadPlugins</span><br><span class="line"></span><br><span class="line">is_correct_subclass = issubclass(</span><br><span class="line"></span><br><span class="line">TypeError: issubclass() arg 1 must be a class</span><br><span class="line"></span><br><span class="line">DEBUG:root:<span class="comment">##############</span></span><br><span class="line"></span><br><span class="line">DEBUG:root:<span class="comment">##############</span></span><br><span class="line"></span><br><span class="line">INFO:root:True</span><br><span class="line"></span><br><span class="line">DEBUG:root:<span class="comment">##############</span></span><br><span class="line"></span><br><span class="line">DEBUG:root:<span class="comment">##############</span></span><br><span class="line"></span><br><span class="line">transform the data &#123;<span class="string">'Hello'</span>: <span class="string">'World'</span>&#125;</span><br><span class="line"></span><br><span class="line">transform the data &#123;<span class="string">'hello'</span>: <span class="string">'arthur'</span>&#125;</span><br><span class="line"></span><br><span class="line">INFO:root:just a demo plugin</span><br><span class="line"></span><br><span class="line">INFO:root:Arthur Li</span><br><span class="line"></span><br><span class="line">INFO:root:1.3.3</span><br></pre></td></tr></table></figure>
+
+
+<p>符合预期</p>
+<h1 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="TypeError-issubclass-arg-1-must-be-a-class"><a href="#TypeError-issubclass-arg-1-must-be-a-class" class="headerlink" title="TypeError: issubclass() arg 1 must be a class"></a>TypeError: issubclass() arg 1 must be a class</h2><p>编辑<code>PluginManager.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 在文件开头导入inspect</span></span><br><span class="line"><span class="keyword">import</span> inspect</span><br><span class="line"></span><br><span class="line"><span class="comment"># 530行左右</span></span><br><span class="line"><span class="keyword">for</span> element, element_name <span class="keyword">in</span> ((getattr(candidate_module, name), name) <span class="keyword">for</span> name <span class="keyword">in</span> dir(candidate_module)):</span><br><span class="line">    plugin_info_reference = <span class="literal">None</span></span><br><span class="line">    <span class="keyword">for</span> category_name <span class="keyword">in</span> self.categories_interfaces:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="comment"># https://sourceforge.net/p/yapsy/bugs/42/</span></span><br><span class="line">            <span class="comment"># 添加：  inspect.isclass(element) and</span></span><br><span class="line">            is_correct_subclass = inspect.isclass(element) <span class="keyword">and</span> issubclass(</span><br><span class="line">                element, self.categories_interfaces[category_name])</span><br><span class="line">        <span class="keyword">except</span> Exception:</span><br><span class="line">            exc_info = sys.exc_info()</span><br><span class="line">            log.debug(<span class="string">"correct subclass tests failed for: %s in %s"</span> % (element_name, candidate_filepath),</span><br><span class="line">                      exc_info=exc_info)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">if</span> is_correct_subclass <span class="keyword">and</span> element <span class="keyword">is</span> <span class="keyword">not</span> self.categories_interfaces[category_name]:</span><br><span class="line">            current_category = category_name</span><br></pre></td></tr></table></figure>
+
+<h2 id="DEBUG-yapsy-plugin1-py-is-not-a-valid-plugin-for-strategy-info-ext"><a href="#DEBUG-yapsy-plugin1-py-is-not-a-valid-plugin-for-strategy-info-ext" class="headerlink" title="DEBUG:yapsy:plugin1.py is not a valid plugin for strategy info_ext"></a>DEBUG:yapsy:plugin1.py is not a valid plugin for strategy info_ext</h2><p>导致这个debug错误的原因是因为<code>PluginFileLocator</code>会扫描plugins目录的中的每个文件，它只读取.yapsy-plugin后缀的文件，不过这个目录还有其他的python文件，所以这个python文件是不符合的插件说明文件的命名规则，所以就debug报错了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> analyzer <span class="keyword">in</span> self._analyzers:</span><br><span class="line">    <span class="comment"># print("... with analyzer %s" % analyzer.name)</span></span><br><span class="line">    <span class="comment"># eliminate the obvious non plugin files</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> analyzer.isValidPlugin(filename):</span><br><span class="line">        log.debug(<span class="string">"%s is not a valid plugin for strategy %s"</span> % (filename, analyzer.name))</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/IT%EF%BC%8CPYTHON-PLUGIN/" rel="tag"># IT，PYTHON, PLUGIN</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Team/team-communication/" rel="prev" title="团队沟通">
+      <i class="fa fa-chevron-left"></i> 团队沟通
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#官网"><span class="nav-number">1.</span> <span class="nav-text">官网</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Quick-Start"><span class="nav-number">3.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#test-main-py"><span class="nav-number">3.1.</span> <span class="nav-text">test-main.py</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plugin1-py"><span class="nav-number">3.2.</span> <span class="nav-text">plugin1.py</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plugin1-yapsy-plugin"><span class="nav-number">3.3.</span> <span class="nav-text">plugin1.yapsy-plugin</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运行结果"><span class="nav-number">4.</span> <span class="nav-text">运行结果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Q-amp-A"><span class="nav-number">5.</span> <span class="nav-text">Q&amp;A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TypeError-issubclass-arg-1-must-be-a-class"><span class="nav-number">5.1.</span> <span class="nav-text">TypeError: issubclass() arg 1 must be a class</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DEBUG-yapsy-plugin1-py-is-not-a-valid-plugin-for-strategy-info-ext"><span class="nav-number">5.2.</span> <span class="nav-text">DEBUG:yapsy:plugin1.py is not a valid plugin for strategy info_ext</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="李联友"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">李联友</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lianyouli" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lianyouli" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李联友</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+<script src="/js/jquery.min.js"> </script>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+<script src="/js/code-unfold.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
